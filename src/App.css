@@ -121,10 +121,15 @@ a{
 
 .alignCenter { align-items: center; }
 .alignStart  { align-items: flex-start; }
+.alignEnd    { align-items: end; }
+
+.textC{
+  text-align: center  ;
+}
 
 /* border */
 .border {
-  border: 1px solid var(--border-color);
+  border: 1px solid red;
 }
 
 /* widths */
@@ -148,6 +153,9 @@ a{
 .gap-8     { gap: 2rem; }     /* 32px */
 .gap-10    { gap: 2.5rem; }   /* 40px */
 .gap-12    { gap: 3rem; }     /* 48px */
+.gap6{
+  gap: 6rem;
+}
 
 /* margins */
 .mgT0{
@@ -155,6 +163,12 @@ a{
 }
 .mgT1{
   margin-top: 1rem;
+}
+.mgT2{
+  margin-top: 2rem;
+}
+.mgT3{
+  margin-top: 3rem;
 }
 
 /* bold */
@@ -290,3 +304,6 @@ footer.footer {
 .maxW55{
   max-width: 55ch;
 }
+
+/* mockup styling */
+

@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-
+import Card from './components/Card';
 
 export default function App() {
   return (
@@ -29,27 +29,41 @@ export default function App() {
         </div>
       </section>
 
+      <section className=" platform-preview ">
+        
+          <div className="platform-mockup">
+            
+            <iframe 
+              src="/src/assets/mockup.html" 
+              width="100%" 
+              height="950"
+              frameBorder={0}
+              title="AI Interview Platform Preview"
+            ></iframe>
+            
+          </div>
+        
+      </section>
+
       {/* Features Section */}
-      <section className="section">
-        <h2 className="semi-bold text-lg">Why Use This Platform?</h2>
-        <div className="features-list gap-4">
-          <div>
-            <h3 className="bold">AI-Led Interviews</h3>
-            <p className="light">Simulates real interviews with contextual follow-ups and dynamic verbal questioning.</p>
+      <section className="section mgT3 flex-col gap-12">
+        <div className="flex alignC justify-center gap6 alignCenter">
+          <div className='flex-col gap-1 alignEnd'>
+            <h2 className='Bmedium tight-text huge minW noBreak'>Replicate the Real.</h2>
+            <h2 className='Bmedium tight-text huge minW noBreak'>Prepare with Precision</h2>
           </div>
           <div>
-            <h3 className="bold">Smart Coding Interface</h3>
-            <p className="light">Solve coding questions tailored to your chosen company or topics in an integrated window.</p>
-          </div>
-          <div>
-            <h3 className="bold">Verbal Feedback</h3>
-            <p className="light">Get detailed spoken feedback on your answers, speech delivery, and coding decisions.</p>
-          </div>
-          <div>
-            <h3 className="bold">Custom & Company Mode</h3>
-            <p className="light">Prepare for Google, TCS, or startups — or build your own interview from topics.</p>
+            <p className='maxW55 normal cW2 Bmedium' style={{lineHeight: "1.4rem"}}>Our platform goes beyond generic question banks. By replicating the environment, dialogue, and pressure of actual interviews, we help you build the confidence and competence required to succeed.</p>
           </div>
         </div>
+        <div className="features-list flex gap-2 justify-center" >
+          <Card title='AI-Led Interviews' imgLInk='/public/images/deep-learning.png'/> 
+          <Card title='Smart Coding Interface'/>
+          <Card title='Verbal Feedback'/>
+          <Card title='Custom & Company Mode'/>
+        </div>
+          
+        
       </section>
 
       {/* How It Works Section */}
