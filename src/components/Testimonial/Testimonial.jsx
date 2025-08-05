@@ -39,11 +39,7 @@ const Testimonial = () =>
     <div className="mgB5 flexC gap4">
       
       <div className="p2Main flex-col gap4">
-        <div className="flexC gap1 alignCenter">
-          
-          <div className="Bmedium tight-text huge text-center">What Users Are Saying</div>
-          <div className="maxW55 normal cW2 Bmedium  textC">Reviews of users who have used this platform for their needs</div>
-        </div>
+        
 
 
 

@@ -24,7 +24,7 @@ export default function App() {
           </div>
           
           <div className="button-row gap-2 flex alignC justifyCenter gap-4 mgT0">
-            <button className="btn  white-btn slight normal Bmedium">Start Practising</button>
+            <button className="btn  white-btn slight normal Bmedium">Start Practising 👉</button>
             <button className="btn transparent-btn normal">See How It Works {">"}</button>
           </div>
         </div>
@@ -123,18 +123,29 @@ export default function App() {
 
 
       {/* Testimonials Section */}
-      <section className="section testimonials mgT9">
+      <section className="section testimonials mgT9 flex-col alignCenter">
+        <div className='minW2'>
+          <div className="flex-col alignStart gap1">
+          
+            <div className="Bmedium tight-text huge ">What Users Are Saying</div>
+            <div className="maxW55 normal cW2 Bmedium  ">Reviews of users who have used this platform for their needs</div>
+          </div>
+        </div>
         <Testimonial />
-        <h2 className="semi-bold text-lg">What Users Are Saying</h2>
-        <blockquote className="light">"This felt like a real Google interview — except I could replay and learn from my mistakes!"</blockquote>
-        <blockquote className="light">"I used this daily for a week before my Meta round. It paid off!"</blockquote>
+        
       </section>
 
       {/* CTA Section */}
-      <section className="section cta">
-        <h2 className="bold text-lg">Train Smarter, Interview Better</h2>
-        <p className="light">Skip the guesswork. Practice real interviews, whenever you want.</p>
-        <button className="white-btn">Get Started Free</button>
+      <section className="section cta mgT9 flex-col alignCenter">
+        <div className="minW2 flex-col gap2">
+          <div className="flex-col gap1">
+            <h2 className="Bmedium tight-text huge ">Train Smarter, Interview Better</h2>
+            <p className=" normal cW2 Bmedium ">Skip the guesswork. Practice real interviews, whenever you want.</p>
+          </div>
+          <button className="btn  white-btn slight normal Bmedium">Start Practising Now 👉</button>
+        </div>
+        
+         
       </section>
 
       <Footer />
