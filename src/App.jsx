@@ -34,7 +34,7 @@ export default function App() {
           <div className="platform-mockup">
             
             <iframe 
-              src="/src/assets/mockup.html" 
+              src="/mockup.html" 
               width="100%" 
               height="950"
               frameBorder={0}
@@ -46,7 +46,7 @@ export default function App() {
       </section>
 
       {/* Features Section */}
-      <section className="section mgT3 flex-col gap-12">
+      <section className="section mgT9 flex-col gap-12">
         <div className="flex alignC justify-center gap6 alignCenter">
           <div className='flex-col gap-1 alignEnd'>
             <h2 className='Bmedium tight-text huge minW noBreak'>Replicate the Real.</h2>
@@ -56,40 +56,75 @@ export default function App() {
             <p className='maxW55 normal cW2 Bmedium' style={{lineHeight: "1.4rem"}}>Our platform goes beyond generic question banks. By replicating the environment, dialogue, and pressure of actual interviews, we help you build the confidence and competence required to succeed.</p>
           </div>
         </div>
-        <div className="features-list flex gap-2 justify-center" >
-          <Card title='AI-Led Interviews' imgLInk='/public/images/deep-learning.png'/> 
-          <Card title='Smart Coding Interface'/>
-          <Card title='Verbal Feedback'/>
-          <Card title='Custom & Company Mode'/>
+        <div className="features_mockup flex alignCenter justify-center">
+              
+          <div className="mockup-container" style={{width: "80%", height: "950px"}}>
+            <iframe 
+            src="/ai_interview_timeline.html" 
+            width="100%" 
+            height="950"
+            frameBorder={0}
+            title="AI Interview Platform Preview"
+          ></iframe>
+          </div>
+              
         </div>
+        
           
         
       </section>
 
       {/* How It Works Section */}
-      <section className="section">
-        <h2 className="semi-bold text-lg">How It Works</h2>
-        <ol className="light gap-3">
-          <li><strong>Step 1:</strong> Select your interview mode (Company / Custom)</li>
-          <li><strong>Step 2:</strong> AI greets and begins interview flow — including intros and follow-ups</li>
-          <li><strong>Step 3:</strong> Respond verbally and write code in the built-in window</li>
-          <li><strong>Step 4:</strong> Receive voice and written feedback at the end of the session</li>
-        </ol>
+
+      <section className="section flex-col alignCenter justifyCenter mgT3">
+        <div className="hero flex-col alignStart justifyCenter gap-8 minW2 ">
+          <div className='flex-col alignStart gap-1'>
+            <h1 className="Bmedium tight-text huge">How It Works </h1>
+            
+          </div>
+          
+          <p className='maxW55 normal cW2 Bmedium ' style={{lineHeight: "1.4rem"}}>Our platform simulates real interview environments with intelligent AI that listens, adapts, and gives feedback like a real human would.</p>
+          
+          {/* how it works mockup */}
+          
+        
+            
+            
+          
+
+
+            <div className="steps">
+              <div className="step">
+                <h3>Step 1: Choose Your Interview Mode</h3>
+                <p>
+                  Pick from company-specific mock interviews (Google, TCS, startups) or build your own custom set by selecting topics and difficulty levels. Tailor it to fit your journey.
+                </p>
+              </div>
+              <div className="step">
+                <h3>Step 2: Meet Your AI Interviewer</h3>
+                <p>
+                  The session begins just like a real interview. The AI welcomes you, walks through introductions, and flows naturally into tailored questions and follow-ups.
+                </p>
+              </div>
+              <div className="step">
+                <h3>Step 3: Speak and Code in Real Time</h3>
+                <p>
+                  Answer out loud while writing code in the built-in editor. The AI listens, adapts, and evaluates your thinking — just like a human interviewer.
+                </p>
+              </div>
+              <div className="step">
+                <h3>Step 4: Get Detailed Feedback</h3>
+                <p>
+                  Receive in-depth verbal and written feedback on your code quality, structure, communication, and problem-solving. Know what to improve, and how.
+                </p>
+              </div>
+            </div>
+        </div>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="section">
-        <h2 className="semi-bold text-lg">Who Is This For?</h2>
-        <ul className="light gap-2">
-          <li>👩‍💻 Aspiring software engineers</li>
-          <li>🧠 Competitive coders</li>
-          <li>🚀 Founders and early-stage hires</li>
-          <li>🎯 Anyone preparing for real interviews</li>
-        </ul>
-      </section>
 
       {/* Testimonials Section */}
-      <section className="section testimonials">
+      <section className="section testimonials mgT9">
         <h2 className="semi-bold text-lg">What Users Are Saying</h2>
         <blockquote className="light">"This felt like a real Google interview — except I could replay and learn from my mistakes!"</blockquote>
         <blockquote className="light">"I used this daily for a week before my Meta round. It paid off!"</blockquote>
