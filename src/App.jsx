@@ -94,12 +94,18 @@ export default function App() {
                   <p className='maxW55 normal cW2' style={{lineHeight: "1.4rem"}}>
                     Pick from company-specific mock interviews (Google, TCS, startups) or build your own custom set by selecting topics and difficulty levels. Tailor it to fit your journey.
                   </p>
+                  <div className="imgBox_hiw">
+                    <img src="/images/hiw2_1.png" alt="" />
+                  </div>
                 </div>
                 <div className="step flex-col alignStart gap-4 pB3 borderType2 p12">
                   <h3 className='large'> Meet Your AI Interviewer</h3>
                   <p className='maxW55 normal cW2' style={{lineHeight: "1.4rem"}}>
                     The session begins just like a real interview. The AI welcomes you, walks through introductions, and flows naturally into tailored questions and follow-ups.
                   </p>
+                  <div className="imgBox_hiw">
+                    <img src="/images/hiw3_1.png" alt="" />
+                  </div>
                 </div>
             </div>
             <div className="flex">
@@ -108,12 +114,18 @@ export default function App() {
                 <p className='maxW55 normal cW2' style={{lineHeight: "1.4rem"}}>
                   Answer out loud while writing code in the built-in editor. The AI listens, adapts, and evaluates your thinking — just like a human interviewer.
                 </p>
+                <div className="imgBox_hiw mgT1 flex justify-start">
+                    <img src="/images/hiw1.png" alt="" />
+                </div>
               </div>
               <div className="step flex-col alignStart gap-4 pB3 borderType2 p12" style={{borderTop: "0px"}}>
                 <h3 className='large'> Get Detailed Feedback</h3>
                 <p className='maxW55 normal cW2' style={{lineHeight: "1.4rem"}}>
                   Receive in-depth verbal and written feedback on your code quality, structure, communication, and problem-solving. Know what to improve, and how.
                 </p>
+                <div className="imgBox_hiw mgT1 flex justify-start">
+                    <img src="/images/hiw4.png" alt="" />
+                </div>
               </div>
             </div>
             
