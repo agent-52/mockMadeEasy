@@ -4,13 +4,14 @@ import Footer from './components/Footer';
 import Card from './components/Card';
 import Testimonial from './components/Testimonial/Testimonial';
 
+
 export default function App() {
   return (
     <div className="app">
       <Header />
 
       {/* Hero Section */}
-      <section className="section flex-col alignCenter justifyCenter ">
+     <section className="section flex-col alignCenter justifyCenter " id='hero'>
         <div className="hero flex-col alignStart justifyCenter gap-8 minW2 noBreak">
           <div className='flex-col alignStart gap-1'>
             <h1 className="Bmedium tight-text huge">You’re not bad at interviews, </h1>
@@ -47,7 +48,7 @@ export default function App() {
       </section>
 
       {/* Features Section */}
-      <section className="section mgT9 flex-col gap-12">
+       <section className="section mgT9 flex-col gap-12" id='features'>
         <div className="flex alignC justify-center gap6 alignCenter">
           <div className='flex-col gap-1 alignEnd'>
             <h2 className='Bmedium tight-text huge minW noBreak'>Replicate the Real.</h2>
@@ -77,7 +78,7 @@ export default function App() {
 
       {/* How It Works Section */}
 
-      <section className="section flex-col alignCenter justifyCenter mgT3">
+      <section className="section flex-col alignCenter justifyCenter mgT3" id='how-it-works'>
         <div className="hero flex-col alignStart justifyCenter gap-8 minW2 ">
           <div className='flex-col alignStart gap-1'>
             <h1 className="Bmedium tight-text huge">How It Works </h1>
