@@ -9,10 +9,28 @@ import { Link } from "react-router"
 import { useEffect } from "react"
 import { apiClient } from "./api/apiClient"
 import { authStore } from "./store/auth.store"
+import { interviewStore } from "./store/interview.store"
 function App() {
   
   const setIsAuthenticated = authStore((s:any) => s.setIsAuthenticated)
   const setIsChecking = authStore((s:any) => s.setIsChecking)
+
+  useEffect(() => {
+    const unlock = () => {
+      const audio = new Audio();
+
+      audio.src = "data:audio/mp3;base64,//uQxAAAAAAAAAAAAAAAAAAAA..."; // tiny silent audio
+      audio.play().catch(() => {});
+
+      (interviewStore.getState() as any).setAudioUnlocked?.(true);
+
+      window.removeEventListener("click", unlock);
+    };
+
+    window.addEventListener("click", unlock);
+
+    return () => window.removeEventListener("click", unlock);
+  }, []);
 
   useEffect(() => {
     async function checkAuthentication() {

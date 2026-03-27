@@ -18,6 +18,9 @@ export const interviewStore = create((set) => ({
 
     error:null,
 
+    audioUnlocked: false,
+    setAudioUnlocked: (val: boolean) => set({ audioUnlocked: val }),
+
     setInterviewId: (id:number) => set({interviewId: id}),
 
     setFetchingQuestion: (value:boolean) => set({isFetchingQuestion: value}),
