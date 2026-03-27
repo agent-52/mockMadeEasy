@@ -1,0 +1,24 @@
+.interview-setup{
+    margin-top: 48px;
+    border-radius: 6px;
+}
+.interview-setup select{
+    width: 100%;
+}
+
+.selectWrapper{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 16px;
+}
+
+@media (max-width: 768px) {
+    .selectWrapper{
+        grid-template-columns: 1fr;
+    }
+}
+
+.interview-setup .active{
+    background-color: var(--accent-primary);
+    color: var(--text-primary);
+}

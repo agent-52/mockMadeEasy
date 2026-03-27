@@ -1,0 +1,6 @@
+-- AlterTable
+ALTER TABLE "Interview" ALTER COLUMN "codeStructure" SET DATA TYPE TEXT,
+ALTER COLUMN "communicationClarity" SET DATA TYPE TEXT,
+ALTER COLUMN "concetptDepth" SET DATA TYPE TEXT,
+ALTER COLUMN "confidenceLevle" SET DATA TYPE TEXT,
+ALTER COLUMN "logicalThinking" SET DATA TYPE TEXT;

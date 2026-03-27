@@ -1,0 +1,1527 @@
+{
+  "subject": "react",
+  "questions": [
+    {
+      "title": "Explain how React's virtual DOM works internally",
+      "description": "Describe the concept of the virtual DOM in React. Explain how React creates a virtual representation of the UI, how it compares the previous and next virtual DOM trees, and how the diffing algorithm determines minimal updates to apply to the real DOM. Discuss why this improves performance.",
+      "difficulty": "medium",
+      "type": "theory",
+      "topics": ["virtual-dom","react-rendering","diffing-algorithm"],
+      "companies": ["Meta","Google","Netflix"]
+    },
+    {
+      "title": "Describe the reconciliation process in React",
+      "description": "Explain how React’s reconciliation algorithm determines what changes should be made to the DOM during re-rendering. Discuss how keys influence the reconciliation process and how React handles updates, insertions, and deletions.",
+      "difficulty": "medium",
+      "type": "theory",
+      "topics": ["reconciliation","react-rendering"],
+      "companies": ["Meta","Amazon"]
+    },
+    {
+      "title": "What problems does React solve compared to traditional DOM manipulation?",
+      "description": "Explain the challenges developers faced when manipulating the DOM directly before frameworks like React existed. Discuss how React simplifies UI updates and state management compared to imperative DOM manipulation.",
+      "difficulty": "easy",
+      "type": "theory",
+      "topics": ["react-fundamentals"],
+      "companies": ["Meta","Google"]
+    },
+    {
+      "title": "Explain the difference between functional and class components",
+      "description": "Describe how functional components and class components differ in React. Explain lifecycle management, state handling, and how hooks replaced many class component patterns.",
+      "difficulty": "easy",
+      "type": "theory",
+      "topics": ["react-components","react-hooks"],
+      "companies": ["Meta","Amazon"]
+    },
+    {
+      "title": "Explain the purpose of React hooks",
+      "description": "Discuss why React introduced hooks and how they allow functional components to manage state, side effects, and lifecycle logic. Explain the design goals behind hooks.",
+      "difficulty": "easy",
+      "type": "theory",
+      "topics": ["react-hooks"],
+      "companies": ["Meta","Google"]
+    },
+    {
+      "title": "Explain how useEffect works and common pitfalls when using it",
+      "description": "Describe how useEffect works internally and when it runs. Explain how dependency arrays affect execution and discuss common mistakes such as stale closures, infinite loops, and incorrect dependencies.",
+      "difficulty": "medium",
+      "type": "theory",
+      "topics": ["react-hooks","side-effects"],
+      "companies": ["Meta","Netflix"]
+    },
+    {
+      "title": "Explain how React manages component re-renders",
+      "description": "Describe how React determines when a component should re-render. Explain the role of state updates, parent re-renders, props changes, and memoization techniques.",
+      "difficulty": "medium",
+      "type": "theory",
+      "topics": ["react-rendering","performance-optimization"],
+      "companies": ["Meta","Google"]
+    },
+    {
+      "title": "Explain prop drilling and strategies to avoid it",
+      "description": "Describe what prop drilling is and why it can make applications difficult to maintain. Discuss solutions such as Context API, state management libraries, or component composition.",
+      "difficulty": "easy",
+      "type": "theory",
+      "topics": ["state-management","context-api"],
+      "companies": ["Meta"]
+    },
+    {
+      "title": "Explain how the Context API works in React",
+      "description": "Explain how React Context allows sharing data across components without passing props manually at every level. Describe providers, consumers, and when Context should or should not be used.",
+      "difficulty": "medium",
+      "type": "theory",
+      "topics": ["context-api","state-management"],
+      "companies": ["Meta","Google"]
+    },
+    {
+      "title": "Explain how React handles event delegation",
+      "description": "Describe how React implements its synthetic event system and how it uses event delegation to improve performance compared to attaching individual DOM listeners.",
+      "difficulty": "medium",
+      "type": "theory",
+      "topics": ["event-handling","react-rendering"],
+      "companies": ["Meta"]
+    },
+    {
+      "title": "Explain the purpose of keys in React lists",
+      "description": "Explain why React requires keys when rendering lists. Describe how keys help React efficiently update lists during reconciliation.",
+      "difficulty": "easy",
+      "type": "theory",
+      "topics": ["lists","reconciliation"],
+      "companies": ["Meta","Amazon"]
+    },
+    {
+      "title": "What happens if keys are not stable or unique?",
+      "description": "Explain how incorrect keys can cause unexpected UI behavior such as incorrect component reuse or state mismatches.",
+      "difficulty": "medium",
+      "type": "theory",
+      "topics": ["lists","reconciliation"],
+      "companies": ["Meta"]
+    },
+    {
+      "title": "Explain the purpose of React.memo",
+      "description": "Describe how React.memo works and when it should be used to prevent unnecessary re-renders.",
+      "difficulty": "medium",
+      "type": "theory",
+      "topics": ["performance-optimization"],
+      "companies": ["Meta"]
+    },
+    {
+      "title": "Explain the difference between useMemo and useCallback",
+      "description": "Describe how useMemo and useCallback help optimize React applications. Explain when each should be used.",
+      "difficulty": "medium",
+      "type": "theory",
+      "topics": ["react-hooks","performance-optimization"],
+      "companies": ["Meta"]
+    },
+    {
+      "title": "Explain how React batching works",
+      "description": "Describe how React batches state updates and how batching improves performance by reducing unnecessary re-renders.",
+      "difficulty": "medium",
+      "type": "theory",
+      "topics": ["react-rendering","performance-optimization"],
+      "companies": ["Meta"]
+    },
+    {
+      "title": "Explain controlled vs uncontrolled components in React forms",
+      "description": "Explain the difference between controlled and uncontrolled components in form handling. Discuss the trade-offs of each approach.",
+      "difficulty": "medium",
+      "type": "theory",
+      "topics": ["forms"],
+      "companies": ["Meta"]
+    },
+    {
+      "title": "Explain React's Strict Mode and its purpose",
+      "description": "Describe what React Strict Mode does in development and how it helps detect unsafe lifecycle methods and side effects.",
+      "difficulty": "medium",
+      "type": "theory",
+      "topics": ["react-tools"],
+      "companies": ["Meta"]
+    },
+    {
+      "title": "Explain React's rendering phases",
+      "description": "Explain the difference between the render phase and commit phase in React's internal architecture.",
+      "difficulty": "hard",
+      "type": "theory",
+      "topics": ["react-rendering","react-internals"],
+      "companies": ["Meta","Google"]
+    },
+    {
+      "title": "Explain how refs work in React",
+      "description": "Explain how refs allow direct access to DOM elements or component instances and when they should be used.",
+      "difficulty": "medium",
+      "type": "theory",
+      "topics": ["refs"],
+      "companies": ["Meta"]
+    },
+    {
+      "title": "Explain forwardRef and its use cases",
+      "description": "Describe how forwardRef enables passing refs through components and why it is useful when building reusable component libraries.",
+      "difficulty": "medium",
+      "type": "theory",
+      "topics": ["refs"],
+      "companies": ["Meta"]
+    },
+    {
+      "title": "Explain error boundaries in React",
+      "description": "Describe how error boundaries work and how they prevent entire applications from crashing when a component throws an error.",
+      "difficulty": "medium",
+      "type": "theory",
+      "topics": ["error-boundaries"],
+      "companies": ["Meta"]
+    },
+    {
+      "title": "Explain code splitting in React applications",
+      "description": "Explain how code splitting improves application performance and how React.lazy and Suspense are used to implement it.",
+      "difficulty": "medium",
+      "type": "theory",
+      "topics": ["code-splitting","performance-optimization"],
+      "companies": ["Netflix"]
+    },
+    {
+      "title": "Explain how React.lazy works",
+      "description": "Explain how React.lazy loads components dynamically and why it improves initial page load performance.",
+      "difficulty": "medium",
+      "type": "theory",
+      "topics": ["code-splitting"],
+      "companies": ["Meta"]
+    },
+    {
+      "title": "Explain the purpose of Suspense in React",
+      "description": "Describe how Suspense handles asynchronous component loading and fallback UI rendering.",
+      "difficulty": "medium",
+      "type": "theory",
+      "topics": ["suspense","react-rendering"],
+      "companies": ["Meta"]
+    },
+    {
+      "title": "Explain how React handles state updates asynchronously",
+      "description": "Discuss why React state updates are asynchronous and how this affects component behavior.",
+      "difficulty": "medium",
+      "type": "theory",
+      "topics": ["state","react-rendering"],
+      "companies": ["Meta"]
+    },
+    {
+      "title": "Explain how React optimizes rendering performance",
+      "description": "Discuss techniques used in React applications to reduce unnecessary rendering and improve performance.",
+      "difficulty": "medium",
+      "type": "theory",
+      "topics": ["performance-optimization"],
+      "companies": ["Meta","Google"]
+    },
+    {
+      "title": "Explain how React Router works",
+      "description": "Describe how client-side routing works in React applications and how React Router manages navigation without page reloads.",
+      "difficulty": "medium",
+      "type": "theory",
+      "topics": ["react-router"],
+      "companies": ["Meta"]
+    },
+    {
+      "title": "Explain server-side rendering in React",
+      "description": "Explain how server-side rendering works in React frameworks and why it improves SEO and performance.",
+      "difficulty": "medium",
+      "type": "theory",
+      "topics": ["server-side-rendering"],
+      "companies": ["Netflix"]
+    },
+    {
+      "title": "Explain hydration in React applications",
+      "description": "Explain what hydration is and how React attaches event handlers to server-rendered HTML.",
+      "difficulty": "hard",
+      "type": "theory",
+      "topics": ["server-side-rendering","react-internals"],
+      "companies": ["Meta"]
+    },
+    {
+      "title": "Explain the difference between CSR and SSR in React",
+      "description": "Compare client-side rendering and server-side rendering approaches and discuss their trade-offs.",
+      "difficulty": "medium",
+      "type": "theory",
+      "topics": ["server-side-rendering"],
+      "companies": ["Google"]
+    },
+        
+    {
+    "title": "Explain how React's diffing algorithm works",
+    "description": "React compares the previous virtual DOM tree with the new one during updates. Explain the assumptions React makes during the diffing process, how it identifies node changes, and how keys influence the efficiency of this algorithm.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["diffing-algorithm","react-rendering"],
+    "companies": ["Meta","Google"]
+    },
+    {
+    "title": "What are custom hooks and when should you create one?",
+    "description": "Explain what custom hooks are in React. Describe situations where extracting logic into a custom hook improves code reuse, readability, and maintainability.",
+    "difficulty": "easy",
+    "type": "theory",
+    "topics": ["react-hooks","code-architecture"],
+    "companies": ["Meta","Amazon"]
+    },
+    {
+    "title": "Explain stale closures in React hooks",
+    "description": "Describe what stale closures are in React hooks and how they can cause unexpected behavior in useEffect or event handlers. Explain strategies to prevent stale state issues.",
+    "difficulty": "hard",
+    "type": "theory",
+    "topics": ["react-hooks","side-effects"],
+    "companies": ["Meta","Netflix"]
+    },
+    {
+    "title": "Explain the concept of lifting state up with an example scenario",
+    "description": "Describe a scenario where multiple components need to share the same state. Explain how lifting state up to a common ancestor solves synchronization issues.",
+    "difficulty": "easy",
+    "type": "theory",
+    "topics": ["state-management"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain the difference between local state and global state",
+    "description": "Describe when component-level state is sufficient and when global state management solutions such as Context or external libraries become necessary.",
+    "difficulty": "easy",
+    "type": "theory",
+    "topics": ["state-management"],
+    "companies": ["Meta","Google"]
+    },
+    {
+    "title": "Explain how React's Context API impacts component re-renders",
+    "description": "Explain how updates in Context providers affect consuming components. Discuss performance implications and strategies for minimizing unnecessary re-renders.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["context-api","performance-optimization"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "What are React portals and when should they be used?",
+    "description": "Explain what React portals are and how they allow rendering components outside the parent DOM hierarchy. Discuss typical use cases such as modals or overlays.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["react-dom","component-patterns"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain the purpose of useRef beyond DOM access",
+    "description": "Besides accessing DOM nodes, useRef can store mutable values that persist across renders. Explain how and why this pattern is used.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["refs","react-hooks"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain the difference between rendering and mounting in React",
+    "description": "Describe what happens during component mounting and rendering phases in React and how they relate to lifecycle behavior.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["react-rendering","react-internals"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain the concept of pure components in React",
+    "description": "Describe what pure components are and how shallow comparison helps prevent unnecessary renders.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["performance-optimization"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain the purpose of useLayoutEffect",
+    "description": "Describe how useLayoutEffect differs from useEffect and when it should be used for DOM measurements or layout changes.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["react-hooks","side-effects"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain how React handles asynchronous rendering",
+    "description": "Describe how modern React can interrupt rendering work and prioritize updates to maintain UI responsiveness.",
+    "difficulty": "hard",
+    "type": "theory",
+    "topics": ["react-internals","react-rendering"],
+    "companies": ["Meta","Google"]
+    },
+    {
+    "title": "Explain concurrent rendering in React",
+    "description": "Describe what concurrent rendering means in React and how it improves user experience by allowing rendering work to be paused and resumed.",
+    "difficulty": "hard",
+    "type": "theory",
+    "topics": ["concurrent-rendering","react-internals"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain React transitions",
+    "description": "Explain how React transitions allow developers to mark state updates as non-urgent and improve perceived UI responsiveness.",
+    "difficulty": "hard",
+    "type": "theory",
+    "topics": ["concurrent-rendering","performance-optimization"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain the purpose of Suspense boundaries",
+    "description": "Describe how Suspense boundaries help manage loading states for asynchronous components and data fetching.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["suspense","react-rendering"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain React component composition",
+    "description": "Explain the concept of component composition and how it helps build flexible UI components compared to inheritance.",
+    "difficulty": "easy",
+    "type": "theory",
+    "topics": ["component-patterns"],
+    "companies": ["Meta","Google"]
+    },
+    {
+    "title": "Explain container and presentational component patterns",
+    "description": "Describe the separation of concerns achieved by container and presentational components and how this improves maintainability.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["component-patterns","code-architecture"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain the render props pattern",
+    "description": "Describe how render props allow sharing logic between components through function props.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["component-patterns"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain higher order components in React",
+    "description": "Explain how higher order components work and how they allow code reuse by wrapping existing components.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["component-patterns"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain the difference between HOCs and hooks",
+    "description": "Compare higher order components and hooks as patterns for sharing logic between components.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["component-patterns","react-hooks"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain React lazy loading and its benefits",
+    "description": "Explain how dynamic imports enable lazy loading of components and how it affects application performance.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["code-splitting","performance-optimization"],
+    "companies": ["Netflix"]
+    },
+    {
+    "title": "Explain how React handles large lists efficiently",
+    "description": "Describe strategies for rendering large datasets efficiently such as virtualization and windowing techniques.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["performance-optimization"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain React windowing libraries",
+    "description": "Explain how libraries like react-window or react-virtualized improve performance when rendering long lists.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["performance-optimization"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain hydration mismatches in React SSR",
+    "description": "Describe what causes hydration mismatches and how developers can avoid them when building server-rendered React applications.",
+    "difficulty": "hard",
+    "type": "theory",
+    "topics": ["server-side-rendering","react-internals"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain the difference between hydration and mounting",
+    "description": "Describe how hydration attaches React to server-rendered HTML and how it differs from normal client-side mounting.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["server-side-rendering"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain how React testing libraries test components",
+    "description": "Describe how testing libraries simulate user interactions and verify component behavior.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["testing"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain snapshot testing in React",
+    "description": "Explain how snapshot testing works and when it should or should not be used.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["testing"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain how to debug performance issues in React",
+    "description": "Describe tools and strategies developers use to detect and fix rendering performance issues in React applications.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["performance-optimization"],
+    "companies": ["Meta","Google"]
+    },
+    {
+    "title": "Explain React DevTools and how it helps debugging",
+    "description": "Explain how React DevTools help developers inspect component trees, props, and performance issues.",
+    "difficulty": "easy",
+    "type": "theory",
+    "topics": ["react-tools"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain how React applications scale in large codebases",
+    "description": "Describe architectural practices used to keep large React applications maintainable and scalable.",
+    "difficulty": "hard",
+    "type": "theory",
+    "topics": ["code-architecture"],
+    "companies": ["Meta","Google"]
+    },
+    {
+    "title": "Explain the architecture of React Fiber",
+    "description": "React Fiber is the core reconciliation engine introduced to enable incremental rendering. Explain why React replaced the previous stack reconciler with Fiber and how Fiber allows React to pause, resume, and prioritize rendering work.",
+    "difficulty": "hard",
+    "type": "theory",
+    "topics": ["react-internals","fiber-architecture"],
+    "companies": ["Meta","Google"]
+    },
+    {
+    "title": "How does React schedule updates internally?",
+    "description": "Explain how React schedules updates when state changes occur. Discuss how React prioritizes work and how scheduling prevents UI blocking during complex rendering operations.",
+    "difficulty": "hard",
+    "type": "theory",
+    "topics": ["react-internals","scheduler"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "What are priority lanes in React concurrent rendering?",
+    "description": "Explain how React assigns priority levels to updates using lanes. Describe how urgent and non-urgent updates are processed differently.",
+    "difficulty": "hard",
+    "type": "theory",
+    "topics": ["concurrent-rendering","react-internals"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain the role of the React scheduler",
+    "description": "Describe how the React scheduler coordinates rendering tasks with the browser event loop. Explain why scheduling improves responsiveness in complex applications.",
+    "difficulty": "hard",
+    "type": "theory",
+    "topics": ["scheduler","react-internals"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain React's commit phase",
+    "description": "Describe what happens during the commit phase of React rendering. Explain how DOM updates, lifecycle events, and ref updates are applied during this phase.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["react-rendering","react-internals"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain how React batches state updates",
+    "description": "Describe how React groups multiple state updates into a single render to improve performance. Explain the behavior in both synchronous and asynchronous environments.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["react-rendering","performance-optimization"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain automatic batching introduced in React 18",
+    "description": "Explain how React 18 expanded batching behavior to include asynchronous events such as promises, timeouts, and native event handlers.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["react-18","performance-optimization"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain React Server Components",
+    "description": "Describe how React Server Components allow rendering certain components on the server. Explain how they reduce bundle size and improve performance.",
+    "difficulty": "hard",
+    "type": "theory",
+    "topics": ["server-components","react-architecture"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain streaming server-side rendering in React",
+    "description": "Explain how streaming SSR sends HTML to the browser progressively instead of waiting for the entire page to render.",
+    "difficulty": "hard",
+    "type": "theory",
+    "topics": ["server-side-rendering","streaming-ssr"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain progressive hydration in React",
+    "description": "Describe how progressive hydration enables parts of a server-rendered page to become interactive incrementally.",
+    "difficulty": "hard",
+    "type": "theory",
+    "topics": ["server-side-rendering","hydration"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain selective hydration in React",
+    "description": "Explain how React prioritizes hydration for components that users interact with first during server-rendered applications.",
+    "difficulty": "hard",
+    "type": "theory",
+    "topics": ["hydration","react-internals"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain the concept of interruptible rendering",
+    "description": "Explain how React concurrent rendering allows rendering work to be paused and resumed, enabling smoother user experiences.",
+    "difficulty": "hard",
+    "type": "theory",
+    "topics": ["concurrent-rendering"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain the difference between blocking and concurrent rendering",
+    "description": "Describe how traditional synchronous rendering differs from concurrent rendering in React.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["concurrent-rendering"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain how React handles large state trees efficiently",
+    "description": "Discuss architectural strategies used in React applications to maintain performance when managing complex state trees.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["state-management","performance-optimization"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain how React applications implement optimistic UI updates",
+    "description": "Explain the concept of optimistic updates where the UI updates before the server confirms the change.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["state-management","user-experience"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain the purpose of the useTransition hook",
+    "description": "Describe how useTransition allows developers to mark state updates as non-urgent.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["react-hooks","concurrent-rendering"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain the purpose of the useDeferredValue hook",
+    "description": "Describe how useDeferredValue helps delay expensive UI updates without blocking urgent interactions.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["react-hooks","performance-optimization"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain how React handles form validation patterns",
+    "description": "Describe architectural approaches for managing form validation in React applications.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["forms"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain the role of immutability in React state updates",
+    "description": "Explain why React relies on immutable updates for detecting changes and optimizing rendering.",
+    "difficulty": "easy",
+    "type": "theory",
+    "topics": ["state-management"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain shallow comparison in React",
+    "description": "Explain how shallow comparison is used by React.memo and PureComponent to detect prop changes.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["performance-optimization"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain React reconciliation edge cases involving keys",
+    "description": "Discuss scenarios where incorrect key usage can cause subtle UI bugs during reconciliation.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["reconciliation","lists"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain the difference between controlled and uncontrolled inputs in large forms",
+    "description": "Discuss trade-offs between controlled and uncontrolled form components in large applications.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["forms"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain React application performance profiling",
+    "description": "Explain how developers measure rendering performance using profiling tools.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["performance-optimization"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain memoization strategies in React applications",
+    "description": "Discuss techniques used to prevent unnecessary recomputation and rendering.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["performance-optimization"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain the concept of UI state versus server state",
+    "description": "Discuss the difference between UI state and server state and how React applications manage them.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["state-management"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain how React applications manage side effects",
+    "description": "Explain patterns used to manage asynchronous operations such as data fetching or subscriptions.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["side-effects","react-hooks"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain the separation of concerns in React applications",
+    "description": "Discuss architectural patterns that help maintain clean separation between UI logic and business logic.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["code-architecture"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain how design systems integrate with React applications",
+    "description": "Explain how reusable component libraries help maintain consistent UI across large applications.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["component-patterns","design-systems"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain the benefits of component-driven development",
+    "description": "Explain how building applications through reusable components improves maintainability.",
+    "difficulty": "easy",
+    "type": "theory",
+    "topics": ["component-patterns"],
+    "companies": ["Meta"]
+    },
+    {
+    "title": "Explain strategies for organizing large React project structures",
+    "description": "Describe common approaches for structuring folders and modules in large React applications.",
+    "difficulty": "medium",
+    "type": "theory",
+    "topics": ["code-architecture"],
+    "companies": ["Meta","Google"]
+    },
+    {
+"title": "Explain how React's event system works",
+"description": "Describe how React implements its synthetic event system. Explain how React normalizes browser events, how event delegation works internally, and why React attaches most listeners at the root instead of individual DOM nodes.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["event-handling","react-internals"],
+"companies": ["Meta","Google"]
+},
+{
+"title": "Explain how React handles event pooling",
+"description": "Explain the concept of event pooling in React's synthetic event system, why it was originally implemented, and why it was removed in later React versions.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["event-handling","react-internals"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how React handles asynchronous data fetching",
+"description": "Discuss strategies for fetching data in React applications, including using useEffect, custom hooks, and handling loading and error states.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["data-fetching","react-hooks"],
+"companies": ["Meta","Netflix"]
+},
+{
+"title": "Explain the difference between client state and server state",
+"description": "Explain how client-side state differs from server-side state and why managing them requires different strategies in modern React applications.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["state-management","data-fetching"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how caching strategies work in React applications",
+"description": "Discuss how caching can reduce network requests and improve performance when fetching remote data in React applications.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["data-fetching","performance-optimization"],
+"companies": ["Meta","Google"]
+},
+{
+"title": "Explain the concept of stale data in React applications",
+"description": "Explain what stale data means when working with asynchronous data and how developers ensure data freshness while avoiding excessive re-fetching.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["data-fetching","state-management"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain React suspense for data fetching",
+"description": "Describe how Suspense can be used for asynchronous data fetching and how it changes traditional loading state patterns.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["suspense","data-fetching"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how React handles component unmounting",
+"description": "Describe what happens internally when a React component is unmounted and how developers should clean up side effects.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["react-lifecycle","side-effects"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain cleanup functions in useEffect",
+"description": "Explain how cleanup functions work in useEffect and why they are necessary for removing subscriptions or event listeners.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["react-hooks","side-effects"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how React prevents memory leaks in components",
+"description": "Discuss common scenarios that lead to memory leaks in React applications and strategies to prevent them.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["side-effects","performance-optimization"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain the difference between useEffect and useLayoutEffect",
+"description": "Compare the execution timing of useEffect and useLayoutEffect and explain when each should be used.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["react-hooks","side-effects"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain the concept of component lifecycle in React",
+"description": "Describe the major phases of a React component lifecycle and how lifecycle behavior differs between class and functional components.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["react-lifecycle"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how React handles component updates",
+"description": "Explain the sequence of operations when a component updates due to state or prop changes.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["react-lifecycle","react-rendering"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain the concept of idempotent rendering",
+"description": "Explain why React components should be pure and idempotent functions of props and state.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["react-rendering","component-patterns"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain the difference between controlled state and derived state",
+"description": "Explain what derived state means and why relying on derived state can lead to bugs if not handled carefully.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["state-management"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how React ensures UI consistency during state updates",
+"description": "Discuss how React guarantees consistent UI rendering even when multiple state updates occur simultaneously.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["react-rendering"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain the concept of hydration errors in server rendered React apps",
+"description": "Explain what hydration errors are and how mismatches between server and client markup occur.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["server-side-rendering","hydration"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how React handles DOM diffing for lists",
+"description": "Explain how React compares list items during reconciliation and why stable keys are necessary for predictable behavior.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["reconciliation","lists"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain React fragments and their purpose",
+"description": "Explain how React fragments allow grouping multiple elements without adding unnecessary nodes to the DOM.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["jsx","react-rendering"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how conditional rendering works in React",
+"description": "Discuss common patterns for conditional rendering and their trade-offs in complex component trees.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["react-rendering"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how React handles form state in complex forms",
+"description": "Discuss strategies for managing large and complex form state in React applications.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["forms","state-management"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how React applications implement accessibility",
+"description": "Discuss techniques used to ensure React applications are accessible and compliant with accessibility standards.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["accessibility"],
+"companies": ["Meta","Google"]
+},
+{
+"title": "Explain how React integrates with browser APIs",
+"description": "Explain how React components interact with browser APIs such as localStorage, geolocation, or the clipboard API.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["browser-apis"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain the role of keys in dynamic UI rendering",
+"description": "Explain why keys are required for dynamic lists and how they affect performance and correctness.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["lists","reconciliation"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain strategies for managing animations in React",
+"description": "Discuss common approaches for implementing animations in React applications and managing animation state.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["animations","ui-interactions"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how React applications handle drag and drop interactions",
+"description": "Describe architectural approaches for implementing drag-and-drop functionality in complex UI systems.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["ui-interactions"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain the concept of component isolation in React",
+"description": "Discuss how isolating components improves testability, maintainability, and reusability in large applications.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["component-patterns"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain the difference between UI state and application state",
+"description": "Explain how UI state differs from global application state and how each should be managed.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["state-management"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how React applications handle feature flags",
+"description": "Discuss strategies for enabling or disabling features dynamically in React applications.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["code-architecture"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain strategies for maintaining performance in very large React applications",
+"description": "Describe architectural and engineering practices used to maintain performance when React applications scale to thousands of components.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["performance-optimization","code-architecture"],
+"companies": ["Meta","Google"]
+},
+{
+"title": "Explain the internal structure of the React fiber tree",
+"description": "Describe how React represents the UI using a fiber tree. Explain what a fiber node contains, how parent-child relationships are stored, and how React traverses the fiber tree during rendering.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["fiber-architecture","react-internals"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how React performs work in units during rendering",
+"description": "React Fiber breaks rendering work into small units to avoid blocking the main thread. Explain how this incremental work model operates.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["fiber-architecture","concurrent-rendering"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain render tearing in React applications",
+"description": "Describe what render tearing is and why it can occur in concurrent rendering environments. Explain how modern React attempts to prevent inconsistent UI states.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["concurrent-rendering","react-internals"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain the concept of transition updates in React",
+"description": "Explain how React differentiates between urgent and transition updates and why this improves UI responsiveness.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["concurrent-rendering","react-hooks"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain the role of the browser event loop in React rendering",
+"description": "Explain how React coordinates rendering work with the browser event loop and why this matters for UI responsiveness.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["react-internals","scheduler"],
+"companies": ["Meta","Google"]
+},
+{
+"title": "Explain cooperative scheduling in React",
+"description": "Explain how React cooperatively yields control to the browser to avoid blocking the main thread during heavy rendering.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["scheduler","concurrent-rendering"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain the difference between React hydration and client rendering",
+"description": "Explain how hydration attaches React to server-rendered markup and how this differs from pure client-side rendering.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["server-side-rendering","hydration"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain hydration mismatch errors and their causes",
+"description": "Describe common reasons hydration mismatches occur and strategies to debug and prevent them.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["server-side-rendering","hydration"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain React streaming SSR architecture",
+"description": "Explain how React streams HTML progressively from the server and how this improves page load performance.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["server-side-rendering","streaming-ssr"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain partial hydration strategies",
+"description": "Explain how partial hydration allows interactive components to load only when needed.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["hydration","server-side-rendering"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain island architecture in modern frontend frameworks",
+"description": "Explain the island architecture concept and how it relates to React-based frameworks.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["frontend-architecture"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how React handles reconciliation for deeply nested component trees",
+"description": "Describe how React optimizes updates when component trees become deeply nested.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["reconciliation","react-rendering"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain memoization strategies for expensive React components",
+"description": "Explain how memoization techniques help reduce expensive rendering operations.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["performance-optimization"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how React handles large dynamic UI updates",
+"description": "Discuss architectural approaches for updating large portions of UI without performance degradation.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["performance-optimization","react-rendering"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain the concept of UI virtualization",
+"description": "Explain how virtualization techniques improve rendering performance for very large lists or tables.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["performance-optimization"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain windowing techniques for large datasets in React",
+"description": "Describe how windowing libraries render only visible items in a large list.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["performance-optimization"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain React component memoization trade-offs",
+"description": "Explain situations where memoization improves performance and situations where it can cause unnecessary complexity.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["performance-optimization"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain the concept of referential equality in React",
+"description": "Explain why referential equality matters when comparing props and dependencies in hooks.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["react-hooks","performance-optimization"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain dependency arrays in React hooks",
+"description": "Explain how dependency arrays control when hooks run and common mistakes developers make.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["react-hooks"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain the rules of hooks in React",
+"description": "Describe the rules developers must follow when using React hooks and why these rules exist.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["react-hooks"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how React manages component identity",
+"description": "Explain how React determines whether to reuse or recreate a component instance.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["reconciliation","react-rendering"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain key-based remounting in React",
+"description": "Explain how changing the key of a component forces React to remount it.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["reconciliation"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain patterns for managing cross-component communication",
+"description": "Discuss strategies for sharing state and events between unrelated components.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["state-management","component-patterns"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain the mediator pattern in React architecture",
+"description": "Explain how mediator patterns can help coordinate communication between components.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["component-patterns","code-architecture"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain dependency inversion in frontend architecture",
+"description": "Explain how dependency inversion helps decouple UI components from business logic.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["code-architecture"],
+"companies": ["Meta","Google"]
+},
+{
+"title": "Explain the role of state machines in React applications",
+"description": "Explain how state machines can help manage complex UI states.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["state-management"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how React applications implement optimistic UI patterns",
+"description": "Explain how UI updates can occur before server confirmation and how applications handle rollbacks.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["state-management","user-experience"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain strategies for handling real-time updates in React applications",
+"description": "Explain architectural approaches for integrating WebSocket or real-time data streams into React apps.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["real-time-data","state-management"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain the challenges of building highly interactive dashboards in React",
+"description": "Discuss performance and architectural considerations when building complex dashboards.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["performance-optimization","ui-architecture"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain best practices for designing reusable React component libraries",
+"description": "Explain architectural practices that make components reusable across multiple projects.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["component-patterns","design-systems"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain the complete React rendering pipeline",
+"description": "Describe the stages React goes through when rendering UI updates, including scheduling, rendering, reconciliation, and the commit phase.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["react-internals","react-rendering"],
+"companies": ["Meta","Google"]
+},
+{
+"title": "Explain the difference between render phase and commit phase in React",
+"description": "Explain what operations occur during the render phase and what happens during the commit phase when React applies updates to the DOM.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["react-internals","react-rendering"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how React prioritizes updates using lanes",
+"description": "Describe the lane model used in React to assign priority levels to updates and how React schedules them.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["react-internals","concurrent-rendering"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain the concept of update queues in React",
+"description": "Explain how React maintains queues of state updates for each fiber node and how these updates are processed during rendering.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["react-internals","fiber-architecture"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how React handles state updates inside event handlers",
+"description": "Explain why multiple state updates inside the same event handler may appear to be batched and how React processes them.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["state-management","react-rendering"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain the difference between synchronous and concurrent updates in React",
+"description": "Explain how synchronous rendering differs from concurrent rendering and how React manages both.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["concurrent-rendering"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain render interruption in concurrent React",
+"description": "Describe how React can interrupt rendering work to prioritize more urgent updates.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["concurrent-rendering","scheduler"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain React's scheduler task queue",
+"description": "Explain how React uses a scheduling system to prioritize and process rendering tasks.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["scheduler","react-internals"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain time slicing in React",
+"description": "Explain how time slicing allows React to break rendering work into smaller chunks to keep the UI responsive.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["concurrent-rendering","scheduler"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain the concept of suspense boundaries internally",
+"description": "Describe how Suspense boundaries pause rendering when asynchronous data or components are loading.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["suspense","react-internals"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain fallback rendering behavior in Suspense",
+"description": "Explain how React decides when to show fallback UI during Suspense loading states.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["suspense"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how React avoids unnecessary DOM updates",
+"description": "Explain how React minimizes DOM mutations using its reconciliation and diffing algorithms.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["diffing-algorithm","react-rendering"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain the difference between shallow comparison and deep comparison",
+"description": "Explain how React uses shallow comparison when optimizing renders and why deep comparisons are usually avoided.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["performance-optimization"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain memoization pitfalls in React applications",
+"description": "Discuss situations where excessive memoization can reduce code clarity without improving performance.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["performance-optimization"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain the concept of render props pattern with an example use case",
+"description": "Describe how render props allow components to share logic through function props.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["component-patterns"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain compound component patterns in React",
+"description": "Explain how compound components allow multiple components to share implicit state.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["component-patterns"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how custom hooks can encapsulate business logic",
+"description": "Explain how custom hooks improve code organization and reuse in complex applications.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["react-hooks","code-architecture"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how to design a reusable custom hook",
+"description": "Describe design considerations when creating reusable hooks for complex logic.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["react-hooks","code-architecture"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how React handles race conditions during asynchronous updates",
+"description": "Discuss how race conditions may occur when multiple asynchronous operations update state.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["react-hooks","side-effects"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain cancellation patterns for asynchronous effects",
+"description": "Explain strategies used to cancel asynchronous operations when components unmount.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["side-effects"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how React applications handle optimistic UI rollback",
+"description": "Explain how applications revert optimistic UI updates when server responses fail.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["state-management"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain strategies for managing loading states in React applications",
+"description": "Discuss architectural patterns for handling loading states when fetching data.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["data-fetching"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how React applications implement pagination efficiently",
+"description": "Explain strategies used to load large datasets incrementally.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["performance-optimization","data-fetching"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain strategies for avoiding prop drilling in large applications",
+"description": "Discuss architectural patterns that prevent deeply nested prop passing.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["state-management","context-api"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain the role of design systems in React ecosystems",
+"description": "Explain how design systems help maintain UI consistency across large applications.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["design-systems"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how React applications integrate internationalization",
+"description": "Discuss patterns for implementing multi-language support in React applications.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["frontend-architecture"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how React applications manage feature rollout strategies",
+"description": "Explain how feature flags enable controlled deployment of new features.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["code-architecture"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain the difference between static rendering and dynamic rendering",
+"description": "Explain how static site generation differs from dynamic rendering approaches.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["server-side-rendering"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain architectural patterns used in enterprise React applications",
+"description": "Describe common architectural patterns used to structure large React codebases.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["code-architecture"],
+"companies": ["Meta","Google"]
+},
+{
+"title": "Explain strategies for testing React components effectively",
+"description": "Discuss testing strategies including unit tests, integration tests, and UI tests.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["testing"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain the role of component isolation in testing",
+"description": "Explain why isolating components improves test reliability.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["testing"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain visual regression testing in React applications",
+"description": "Explain how visual testing helps detect UI changes during development.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["testing"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain strategies for debugging complex React applications",
+"description": "Discuss approaches developers use to identify bugs in large component trees.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["react-tools"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how React DevTools profiler works",
+"description": "Explain how the React profiler identifies performance bottlenecks.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["react-tools","performance-optimization"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain the role of bundle optimization in React applications",
+"description": "Explain how reducing bundle size improves application performance.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["performance-optimization"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain tree shaking in frontend bundlers",
+"description": "Explain how bundlers remove unused code during builds.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["performance-optimization"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how code splitting reduces initial load time",
+"description": "Explain how splitting application code into smaller chunks improves page load performance.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["code-splitting"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain lazy loading strategies for large React applications",
+"description": "Discuss techniques used to delay loading non-critical components.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["code-splitting"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain strategies for managing very large React component trees",
+"description": "Discuss architectural strategies used to maintain performance and maintainability.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["code-architecture","performance-optimization"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how React applications scale across large engineering teams",
+"description": "Discuss engineering practices used to maintain consistency and reliability in large teams.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["frontend-architecture"],
+"companies": ["Meta","Google"]
+}
+
+  ]
+}

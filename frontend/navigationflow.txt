@@ -1,0 +1,11 @@
+Dashboard
+   ↓
+Review (deep dive)
+   ↓
+Summary (high-level snapshot)
+
+Past Sessions
+   ↓
+Summary
+   ↓
+Review (if user clicks "Review Answers")

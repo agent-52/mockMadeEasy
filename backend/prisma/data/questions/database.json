@@ -1,0 +1,1446 @@
+{
+  "subject": "database",
+  "questions": [
+    {
+"title": "You notice a SQL query that scans millions of rows and takes several seconds to complete. How would you diagnose the problem?",
+"description": "Explain the steps you would take to identify the cause of a slow SQL query and improve its performance.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["query-debugging","performance-tuning"],
+"companies": ["Amazon","Stripe"]
+},
+{
+"title": "Explain how you would design a database schema for a simple e-commerce order system",
+"description": "Describe the tables and relationships you would create for users, products, orders, and order items.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["schema-design","database-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how you would store user authentication data in a relational database",
+"description": "Explain what fields should be stored for user authentication and how passwords should be securely stored.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["schema-design","security"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain the difference between TEXT and VARCHAR in PostgreSQL",
+"description": "Explain how PostgreSQL stores text data types and when VARCHAR length limits matter.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["postgres"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain JSON and JSONB data types in PostgreSQL",
+"description": "Explain the differences between JSON and JSONB and when each should be used.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain how PostgreSQL indexing works internally",
+"description": "Explain how PostgreSQL uses B-tree indexes and how they improve query performance.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres","indexing"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how to identify whether a PostgreSQL query is using an index",
+"description": "Explain how query execution plans help determine whether indexes are being used.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres","query-debugging"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain what EXPLAIN and EXPLAIN ANALYZE do in PostgreSQL",
+"description": "Explain how PostgreSQL execution plans help developers understand query performance.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres","query-debugging"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain why adding too many indexes can hurt database performance",
+"description": "Explain how indexes improve reads but slow down write operations.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["indexing","performance-tuning"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the N+1 query problem",
+"description": "Explain how inefficient query patterns can cause multiple unnecessary database queries.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["query-debugging","performance-tuning"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain how database migrations work in backend applications",
+"description": "Explain how migrations manage schema changes safely across environments.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["database-architecture"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain how you would design a database for a messaging application",
+"description": "Explain what tables you would create for users, conversations, and messages.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["schema-design"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how PostgreSQL handles concurrent transactions",
+"description": "Explain how PostgreSQL prevents conflicts when multiple users modify the same data.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres","transactions"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain MVCC in PostgreSQL",
+"description": "Explain how multi-version concurrency control allows PostgreSQL to handle concurrent reads and writes.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["postgres","transactions"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how PostgreSQL prevents dirty reads",
+"description": "Explain how PostgreSQL's transaction model prevents uncommitted data from being visible to other transactions.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres","transactions"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how you would optimize a query that joins multiple large tables",
+"description": "Explain techniques used to optimize joins in large datasets.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["query-optimization"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the difference between OLTP and OLAP databases",
+"description": "Explain how transactional databases differ from analytical databases.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-architecture"],
+"companies": ["Google"]
+},
+{
+"title": "Explain how database replication works",
+"description": "Explain how replicas improve availability and read performance.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-architecture","scalability"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain leader-follower replication",
+"description": "Explain how a primary database handles writes while replicas handle reads.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-architecture","scalability"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain database failover",
+"description": "Explain how systems automatically switch to a replica when the primary database fails.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-architecture","reliability"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain database sharding",
+"description": "Explain how large datasets are distributed across multiple database servers.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-architecture","scalability"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain hot shard problems in sharded databases",
+"description": "Explain how uneven data distribution can cause certain shards to become overloaded.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how you would design a database for storing user activity logs",
+"description": "Explain schema and indexing considerations for very high write workloads.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["schema-design","performance-tuning"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain time-series data storage strategies",
+"description": "Explain how databases handle large volumes of time-based data efficiently.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-architecture"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain how caching can reduce database load",
+"description": "Explain how caching layers reduce the number of database queries.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["performance-tuning","database-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain cache invalidation challenges in database-backed systems",
+"description": "Explain why maintaining cache consistency with databases is difficult.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["performance-tuning"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how you would migrate a large database without downtime",
+"description": "Explain strategies used to perform schema migrations safely on production systems.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["database-architecture","reliability"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain how database backups work",
+"description": "Explain strategies used to ensure data durability and recovery.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["database-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain point-in-time recovery in databases",
+"description": "Explain how systems restore databases to a specific point in time.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain write-ahead logging in PostgreSQL",
+"description": "Explain how PostgreSQL ensures durability through WAL.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["postgres","database-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Write a SQL query to find the second highest salary from an employees table",
+"description": "Assume a table employees(id, name, salary). Write a query that returns the second highest salary.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Amazon","Google"]
+},
+{
+"title": "Write a SQL query to find duplicate records in a table",
+"description": "Given a users table with columns id, email, write a query to find emails that appear more than once.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Amazon"]
+},
+{
+"title": "Write a SQL query to find users who have never placed an order",
+"description": "Assume tables users(id) and orders(user_id). Write a query to return users who have no orders.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Amazon","Stripe"]
+},
+{
+"title": "Write a SQL query to calculate the total sales per customer",
+"description": "Assume orders(customer_id, amount). Write a query to return total order value per customer.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Amazon"]
+},
+{
+"title": "Write a SQL query to find the top 3 highest paid employees",
+"description": "Given employees(id, name, salary), return the top three salaries.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Google"]
+},
+{
+"title": "Explain window functions in SQL",
+"description": "Explain how window functions allow calculations across a set of rows related to the current row.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["sql","window-functions"],
+"companies": ["Stripe"]
+},
+{
+"title": "Write a SQL query using ROW_NUMBER to rank employees by salary",
+"description": "Use ROW_NUMBER to assign ranks to employees based on salary in descending order.",
+"difficulty": "medium",
+"type": "coding",
+"topics": ["sql","window-functions"],
+"companies": ["Amazon"]
+},
+{
+"title": "Write a SQL query to find the highest salary in each department",
+"description": "Assume employees(name, department, salary). Return the highest salary per department.",
+"difficulty": "medium",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Amazon"]
+},
+{
+"title": "Write a SQL query to find the department with the highest average salary",
+"description": "Assume employees(name, department, salary). Return the department with the highest average salary.",
+"difficulty": "medium",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Amazon"]
+},
+{
+"title": "Write a SQL query to find consecutive login days for users",
+"description": "Assume login_events(user_id, login_date). Identify users who logged in on consecutive days.",
+"difficulty": "hard",
+"type": "coding",
+"topics": ["sql","window-functions"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how PostgreSQL handles large table scans",
+"description": "Explain how PostgreSQL scans tables and when sequential scans are chosen over index scans.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres","query-debugging"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the difference between sequential scan and index scan in PostgreSQL",
+"description": "Explain when PostgreSQL chooses sequential scans versus index scans.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres","query-debugging"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how PostgreSQL query planners choose execution strategies",
+"description": "Explain how PostgreSQL decides which query plan is most efficient.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["postgres","query-optimization"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the purpose of database constraints",
+"description": "Explain how constraints such as UNIQUE, CHECK, and NOT NULL enforce data integrity.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["database-fundamentals"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the difference between UNIQUE and PRIMARY KEY constraints",
+"description": "Explain how these constraints enforce uniqueness in relational tables.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["database-fundamentals"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how foreign key cascading works",
+"description": "Explain how ON DELETE CASCADE and ON UPDATE CASCADE affect related records.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-fundamentals"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain partial indexes in PostgreSQL",
+"description": "Explain how partial indexes index only a subset of table rows.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres","indexing"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain GIN indexes in PostgreSQL",
+"description": "Explain how GIN indexes are used for full-text search and JSONB indexing.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres","indexing"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain BRIN indexes in PostgreSQL",
+"description": "Explain when BRIN indexes are useful for very large tables.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["postgres","indexing"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain how PostgreSQL handles full-text search",
+"description": "Explain how PostgreSQL implements full-text search using tsvector and tsquery.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain the difference between OFFSET pagination and cursor pagination",
+"description": "Explain the performance implications of offset-based pagination.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["query-optimization"],
+"companies": ["Stripe"]
+},
+{
+"title": "Write a SQL query to paginate results using LIMIT and OFFSET",
+"description": "Assume a posts table ordered by created_at. Write a query to fetch page 2 with 10 results per page.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the drawbacks of OFFSET pagination on large datasets",
+"description": "Explain why offset pagination becomes slow as offset values increase.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["query-optimization"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain cursor-based pagination",
+"description": "Explain how cursor-based pagination improves performance and consistency.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["query-optimization"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain how you would design a database schema for a social media feed",
+"description": "Explain tables and indexing strategies for posts, likes, and comments.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["schema-design"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how to store hierarchical data in relational databases",
+"description": "Explain adjacency list and nested set models for hierarchical data.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how to handle soft deletes in relational databases",
+"description": "Explain why systems sometimes mark records as deleted instead of removing them.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["schema-design"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain database auditing",
+"description": "Explain how systems track historical changes to records.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-architecture"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain how database triggers work",
+"description": "Explain how triggers execute automatically when certain database events occur.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-fundamentals"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the difference between stored procedures and application logic",
+"description": "Explain when business logic should live inside the database versus the application.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "A query that was fast yesterday is suddenly very slow today. How would you investigate the issue?",
+"description": "Explain the steps you would take to diagnose a sudden database performance regression.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["query-debugging","performance-tuning"],
+"companies": ["Amazon","Stripe"]
+},
+{
+"title": "Explain how PostgreSQL VACUUM works",
+"description": "Explain why PostgreSQL requires vacuuming and how it removes dead tuples created by MVCC.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres","database-operations"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain autovacuum in PostgreSQL",
+"description": "Explain how PostgreSQL automatically cleans up dead rows using autovacuum.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres","database-operations"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain what dead tuples are in PostgreSQL",
+"description": "Explain how MVCC creates multiple row versions and how dead tuples accumulate.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how PostgreSQL handles deadlocks",
+"description": "Explain how PostgreSQL detects and resolves deadlocks between transactions.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres","transactions","deadlocks"],
+"companies": ["Amazon"]
+},
+{
+"title": "What is a deadlock in a database system?",
+"description": "Explain how two transactions can block each other indefinitely and how databases resolve the situation.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["transactions","deadlocks"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how you would detect deadlocks in a production system",
+"description": "Explain how logs and monitoring tools help detect deadlocks.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["query-debugging","deadlocks"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain how database connection pools work",
+"description": "Explain why backend servers reuse database connections instead of creating new ones for every request.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["database-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain problems caused by too many database connections",
+"description": "Explain how opening too many connections can overload a database server.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["performance-tuning"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how you would design a schema for storing blog posts and comments",
+"description": "Explain the tables and relationships needed for posts, comments, and users.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["schema-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how you would design a database for storing product reviews",
+"description": "Explain how you would store users, products, ratings, and review text.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["schema-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Write a SQL query to find products with the highest average rating",
+"description": "Assume reviews(product_id, rating). Return products with the highest average rating.",
+"difficulty": "medium",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Amazon"]
+},
+{
+"title": "Write a SQL query to find the most active users based on number of posts",
+"description": "Assume posts(user_id). Return users with the highest post counts.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Meta"]
+},
+{
+"title": "Write a SQL query to calculate the running total of daily sales",
+"description": "Assume sales(date, amount). Return cumulative sales using window functions.",
+"difficulty": "medium",
+"type": "coding",
+"topics": ["sql","window-functions"],
+"companies": ["Stripe"]
+},
+{
+"title": "Write a SQL query to find gaps in a sequence of IDs",
+"description": "Assume orders(id). Find missing IDs in the sequence.",
+"difficulty": "hard",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how PostgreSQL stores data on disk",
+"description": "Explain pages, tuples, and how PostgreSQL organizes table storage.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["postgres"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain table partitioning in PostgreSQL",
+"description": "Explain how large tables can be divided into smaller partitions for performance and manageability.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres","database-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain range partitioning in PostgreSQL",
+"description": "Explain how tables can be partitioned based on ranges such as dates.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain hash partitioning in PostgreSQL",
+"description": "Explain how rows are distributed across partitions based on hash values.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain why large indexes can hurt performance",
+"description": "Explain how overly large indexes increase memory usage and maintenance costs.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["indexing","performance-tuning"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain index-only scans in PostgreSQL",
+"description": "Explain how PostgreSQL can retrieve results directly from indexes without reading table rows.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres","indexing"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain covering indexes",
+"description": "Explain how covering indexes include all columns needed for a query.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["indexing"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain how PostgreSQL handles large transactions",
+"description": "Explain why large transactions can create performance issues.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["transactions","performance-tuning"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how database locking works",
+"description": "Explain row-level locks and table-level locks in relational databases.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["transactions"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the difference between shared locks and exclusive locks",
+"description": "Explain how different lock types affect concurrent access to rows.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["transactions"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how long-running transactions affect database performance",
+"description": "Explain how long transactions prevent cleanup of old row versions.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["performance-tuning"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain database hot spots",
+"description": "Explain how frequently accessed rows can become contention points.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["performance-tuning"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain write amplification in databases",
+"description": "Explain how database updates can cause multiple writes internally.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["database-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the concept of database snapshots",
+"description": "Explain how snapshots allow consistent views of the database at a specific point in time.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["transactions"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how monitoring helps maintain database performance",
+"description": "Explain metrics commonly monitored in production databases.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["database-operations"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a database schema for a ride sharing application like Uber",
+"description": "Explain what tables you would create for users, drivers, rides, and payments and how they would relate to each other.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["schema-design","database-architecture"],
+"companies": ["Uber"]
+},
+{
+"title": "Design a database schema for a social media application like Instagram",
+"description": "Explain how you would structure tables for users, posts, likes, comments, and followers.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["schema-design"],
+"companies": ["Meta"]
+},
+{
+"title": "Design a database schema for an online marketplace",
+"description": "Explain how you would structure tables for users, products, orders, and reviews.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["schema-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "You have a table with 100 million rows and queries are becoming slow. What steps would you take to improve performance?",
+"description": "Explain indexing strategies, partitioning, query optimization, and caching approaches.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["performance-tuning","scalability"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how you would optimize a query that performs multiple joins on large tables",
+"description": "Explain strategies such as indexing join columns, reducing result sets early, and analyzing query plans.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["query-debugging","query-optimization"],
+"companies": ["Amazon"]
+},
+{
+"title": "Write a SQL query to find users who placed more than five orders in the last month",
+"description": "Assume tables users(id) and orders(user_id, created_at).",
+"difficulty": "medium",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Amazon"]
+},
+{
+"title": "Write a SQL query to find the most purchased product",
+"description": "Assume order_items(product_id, quantity). Return the product with the highest total quantity sold.",
+"difficulty": "medium",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Amazon"]
+},
+{
+"title": "Write a SQL query to find users who placed orders on three consecutive days",
+"description": "Assume orders(user_id, order_date).",
+"difficulty": "hard",
+"type": "coding",
+"topics": ["sql","window-functions"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how database indexing affects insert performance",
+"description": "Explain how maintaining indexes increases write overhead.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["indexing","performance-tuning"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain composite indexes and when they are useful",
+"description": "Explain how multi-column indexes optimize queries filtering on multiple columns.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["indexing"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain covering indexes in query optimization",
+"description": "Explain how indexes containing all required columns allow queries to avoid table scans.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["indexing","query-optimization"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain how PostgreSQL handles concurrent updates on the same row",
+"description": "Explain row locking and transaction isolation behavior.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres","transactions"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how PostgreSQL prevents lost updates",
+"description": "Explain how transaction isolation ensures correct concurrent updates.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres","transactions"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how database replication improves read scalability",
+"description": "Explain how read replicas distribute query load.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["scalability","database-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how you would design a database for storing chat messages",
+"description": "Explain schema considerations for users, conversations, and messages.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["schema-design"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain how you would store analytics events generated by millions of users",
+"description": "Explain schema and partitioning strategies for high write throughput.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-architecture","scalability"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain time-based partitioning in databases",
+"description": "Explain how partitioning by date improves query performance for time-series data.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-architecture","postgres"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain how PostgreSQL handles large JSON documents",
+"description": "Explain storage and indexing considerations for JSONB fields.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain how full-text search works in PostgreSQL",
+"description": "Explain how PostgreSQL indexes text data for search queries.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain how to optimize pagination queries on very large datasets",
+"description": "Explain the advantages of cursor-based pagination.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["query-optimization","performance-tuning"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain how database caches improve performance",
+"description": "Explain how caching layers reduce repeated database queries.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["performance-tuning"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the difference between database caching and application caching",
+"description": "Explain how caching layers exist at multiple levels of the stack.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how write-heavy workloads affect database performance",
+"description": "Explain strategies used to handle high write throughput.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["performance-tuning"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain how you would migrate a large production database schema safely",
+"description": "Explain techniques such as backward-compatible migrations.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-operations"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain how you would detect slow queries in a production database",
+"description": "Explain tools and logging strategies used to detect slow queries.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["query-debugging"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how query logging helps diagnose performance problems",
+"description": "Explain how database logs help identify inefficient queries.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["query-debugging"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how database schema evolution is handled in large systems",
+"description": "Explain strategies for managing schema changes across many services.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-architecture"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain eventual consistency in distributed databases",
+"description": "Explain how systems trade consistency for availability.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["distributed-systems"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the CAP theorem in the context of databases",
+"description": "Explain consistency, availability, and partition tolerance tradeoffs.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["distributed-systems"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how distributed databases maintain consistency",
+"description": "Explain techniques such as consensus algorithms and replication.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["distributed-systems"],
+"companies": ["Google"]
+},
+{
+"title": "Write a SQL query to find the third highest salary from an employees table",
+"description": "Assume employees(id, name, salary). Write a query that returns the third highest salary.",
+"difficulty": "medium",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Amazon","Google"]
+},
+{
+"title": "Write a SQL query to calculate the median salary of employees",
+"description": "Assume employees(id, salary). Write a query to compute the median salary.",
+"difficulty": "hard",
+"type": "coding",
+"topics": ["sql","analytics-queries"],
+"companies": ["Google"]
+},
+{
+"title": "Write a SQL query to detect duplicate rows based on multiple columns",
+"description": "Assume a table orders(user_id, product_id, created_at). Identify duplicate rows.",
+"difficulty": "medium",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Amazon"]
+},
+{
+"title": "Write a SQL query to find the longest streak of consecutive login days for a user",
+"description": "Assume login_events(user_id, login_date). Return the longest login streak.",
+"difficulty": "hard",
+"type": "coding",
+"topics": ["sql","window-functions"],
+"companies": ["Meta"]
+},
+{
+"title": "Write a SQL query to calculate daily active users",
+"description": "Assume login_events(user_id, login_date). Return number of distinct users per day.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["sql","analytics-queries"],
+"companies": ["Meta"]
+},
+{
+"title": "Write a SQL query to calculate 7-day rolling average of daily sales",
+"description": "Assume sales(date, amount). Use window functions to compute rolling averages.",
+"difficulty": "medium",
+"type": "coding",
+"topics": ["sql","window-functions"],
+"companies": ["Amazon"]
+},
+{
+"title": "Write a SQL query to find overlapping time intervals",
+"description": "Assume bookings(start_time, end_time). Identify overlapping bookings.",
+"difficulty": "hard",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Google"]
+},
+{
+"title": "Write a SQL query to find customers who bought every product in a category",
+"description": "Assume orders(user_id, product_id) and products(category).",
+"difficulty": "hard",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Amazon"]
+},
+{
+"title": "Write a SQL query to find the percentage of returning users",
+"description": "Assume login_events(user_id, login_date). Calculate percentage of users who logged in more than once.",
+"difficulty": "medium",
+"type": "coding",
+"topics": ["sql","analytics-queries"],
+"companies": ["Meta"]
+},
+{
+"title": "Write a SQL query to identify inactive users",
+"description": "Assume users(id) and login_events(user_id, login_date). Return users who haven't logged in for 30 days.",
+"difficulty": "medium",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain how PostgreSQL handles index bloat",
+"description": "Explain why indexes grow over time and how they are maintained.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres","performance-tuning"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the purpose of REINDEX in PostgreSQL",
+"description": "Explain when and why REINDEX is required.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres","database-operations"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the difference between HOT updates and normal updates in PostgreSQL",
+"description": "Explain how PostgreSQL optimizes certain updates using heap-only tuples.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["postgres"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how PostgreSQL handles large transactions internally",
+"description": "Explain WAL behavior and MVCC interactions with large transactions.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["postgres","transactions"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how database statistics affect query planning",
+"description": "Explain how query planners rely on statistics to estimate query costs.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["query-optimization"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how ANALYZE works in PostgreSQL",
+"description": "Explain how PostgreSQL collects statistics used by the query planner.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres","query-optimization"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how database query caching works",
+"description": "Explain how caching query results can improve performance.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["performance-tuning"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how database hot rows occur",
+"description": "Explain how frequent updates to the same row cause contention.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["performance-tuning"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the impact of large transactions on database vacuum processes",
+"description": "Explain how long-running transactions prevent cleanup of old rows.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres","performance-tuning"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how to monitor PostgreSQL performance in production",
+"description": "Explain common tools and metrics used to monitor database health.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-operations","postgres"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how query timeouts help protect database performance",
+"description": "Explain how timeouts prevent runaway queries from consuming resources.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["performance-tuning"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain database query batching",
+"description": "Explain how batching queries reduces round-trip latency between application and database.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["performance-tuning"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain how ORMs can cause inefficient queries",
+"description": "Explain the N+1 query problem and ORM-generated inefficiencies.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["query-debugging"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain when raw SQL should be used instead of ORM queries",
+"description": "Explain cases where raw queries improve performance or flexibility.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["query-optimization"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain how PostgreSQL handles large JSONB fields in queries",
+"description": "Explain indexing and performance considerations for JSONB queries.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["postgres"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain how database migrations can cause downtime",
+"description": "Explain how schema changes may block tables or queries.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-operations"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain strategies for zero-downtime database migrations",
+"description": "Explain techniques such as backward-compatible schema changes.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["database-operations"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain how distributed databases resolve conflicting writes",
+"description": "Explain strategies such as last-write-wins and conflict resolution.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["distributed-systems"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain quorum-based replication in distributed databases",
+"description": "Explain how read and write quorums maintain consistency.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["distributed-systems"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain leader election in distributed databases",
+"description": "Explain how distributed systems select a primary node.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["distributed-systems"],
+"companies": ["Google"]
+},
+{
+"title": "Write a SQL query to retrieve all users from a users table",
+"description": "Assume a table users(id, name, email). Write a query to return all rows from the table.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Amazon"]
+},
+{
+"title": "Write a SQL query to retrieve users with the name 'John'",
+"description": "Assume users(id, name, email). Return users where name equals John.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Amazon"]
+},
+{
+"title": "Write a SQL query to count the number of users in a table",
+"description": "Assume a users table. Write a query that returns the total number of rows.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Amazon"]
+},
+{
+"title": "Write a SQL query to sort users by their creation date",
+"description": "Assume users(id, name, created_at). Return users ordered by created_at descending.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Amazon"]
+},
+{
+"title": "Write a SQL query to return the first 10 rows of a table",
+"description": "Assume a posts table. Return the first 10 rows using SQL.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the purpose of the WHERE clause in SQL",
+"description": "Explain how the WHERE clause filters rows returned by a query.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["sql"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the difference between DELETE and TRUNCATE",
+"description": "Explain how these two operations remove rows and how they differ in performance and behavior.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["database-fundamentals"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the difference between DROP TABLE and DELETE FROM",
+"description": "Explain how DROP removes a table entirely while DELETE removes rows.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["database-fundamentals"],
+"companies": ["Amazon"]
+},
+{
+"title": "Write a SQL query to find users created in the last 7 days",
+"description": "Assume users(id, created_at). Return users created within the last week.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain why primary keys are important in a database table",
+"description": "Explain how primary keys uniquely identify rows and help enforce data integrity.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["database-fundamentals"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the purpose of foreign keys in relational databases",
+"description": "Explain how foreign keys enforce relationships between tables.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["database-fundamentals"],
+"companies": ["Amazon"]
+},
+{
+"title": "Write a SQL query to find orders placed by a specific user",
+"description": "Assume orders(id, user_id, amount). Return orders for user_id = 5.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Amazon"]
+},
+{
+"title": "Write a SQL query to calculate the total number of orders",
+"description": "Assume orders(id). Return total order count.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["sql"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain what NULL means in SQL",
+"description": "Explain how NULL represents missing or unknown values in database rows.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["database-fundamentals"],
+"companies": ["Amazon"]
+},
+{
+"title": "Write a SQL query to find users with NULL email values",
+"description": "Assume users(id, email). Return users where email is NULL.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the purpose of indexes in databases",
+"description": "Explain how indexes help speed up queries by allowing faster data lookup.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["indexing"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain why indexes can improve query performance",
+"description": "Explain how indexes reduce the need for full table scans.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["indexing"],
+"companies": ["Amazon"]
+},
+{
+"title": "Write a SQL query to find the highest order amount",
+"description": "Assume orders(amount). Return the highest value.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Amazon"]
+},
+{
+"title": "Write a SQL query to find the average order value",
+"description": "Assume orders(amount). Return the average amount.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the purpose of GROUP BY in SQL",
+"description": "Explain how GROUP BY aggregates rows based on column values.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["sql"],
+"companies": ["Amazon"]
+},
+{
+"title": "Write a SQL query to count the number of orders per user",
+"description": "Assume orders(user_id). Return order counts grouped by user.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the difference between COUNT(*) and COUNT(column)",
+"description": "Explain how COUNT behaves differently when NULL values are present.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["sql"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the purpose of LIMIT in SQL queries",
+"description": "Explain how LIMIT restricts the number of rows returned by a query.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["sql"],
+"companies": ["Amazon"]
+},
+{
+"title": "Write a SQL query to retrieve the five most recent posts",
+"description": "Assume posts(id, created_at). Return the five newest rows.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Meta"]
+},
+{
+"title": "Explain why pagination is needed in database queries",
+"description": "Explain why applications paginate large result sets.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["query-optimization"],
+"companies": ["Stripe"]
+},
+{
+"title": "Write a SQL query to paginate results using LIMIT and OFFSET",
+"description": "Assume posts ordered by created_at. Return page 2 with 10 rows per page.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain the difference between SQL JOIN and multiple separate queries",
+"description": "Explain how joins combine data from multiple tables.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["sql"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the difference between INNER JOIN and LEFT JOIN",
+"description": "Explain how INNER JOIN returns matching rows while LEFT JOIN includes unmatched rows.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["sql"],
+"companies": ["Amazon"]
+},
+{
+"title": "Write a SQL query to retrieve orders along with user information",
+"description": "Assume users(id) and orders(user_id). Join the tables to return user and order data.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["sql","query-writing"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain why database schema design is important",
+"description": "Explain how good schema design improves maintainability and performance.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["schema-design"],
+"companies": ["Amazon"]
+}
+
+  ]
+}

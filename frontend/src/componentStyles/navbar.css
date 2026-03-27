@@ -1,0 +1,32 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 58px;
+  z-index: 100;
+
+  background: #1616167a; /* semi-transparent */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); /* Safari */
+    border-bottom: 1px solid var(--border-subtle);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+
+  padding: 0 24px;
+}
+.navbar .profileButton {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border-subtle);
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 150ms ease;
+}
+.profileButton:hover{
+    border-color: var(--accent-hover);
+}

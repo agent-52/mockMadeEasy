@@ -1,0 +1,485 @@
+{
+  "subject": "dsa",
+  "questions": [
+    {
+"title": "Find maximum element in an array",
+"description": "Given an array of integers, return the largest element.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["arrays"],
+"companies": ["Amazon"],
+"constraints": "1 <= n <= 10^5",
+"inputFormat": "Array of integers",
+"outputFormat": "Return the maximum value",
+"testCases": [
+{"input":"[1,3,2,8,5]","expectedOutput":"8","isPublic":true},
+{"input":"[-5,-2,-10]","expectedOutput":"-2","isPublic":true},
+{"input":"[42]","expectedOutput":"42","isPublic":false}
+]
+},
+{
+"title": "Find minimum element in an array",
+"description": "Given an array of integers, return the smallest element.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["arrays"],
+"companies": ["Amazon"],
+"constraints": "1 <= n <= 10^5",
+"inputFormat": "Array of integers",
+"outputFormat": "Return the minimum value",
+"testCases": [
+{"input":"[3,1,4,2]","expectedOutput":"1","isPublic":true},
+{"input":"[10,20,5]","expectedOutput":"5","isPublic":true},
+{"input":"[7]","expectedOutput":"7","isPublic":false}
+]
+},
+{
+"title": "Calculate sum of elements in an array",
+"description": "Return the sum of all elements in the array.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["arrays"],
+"companies": ["Amazon"],
+"constraints": "1 <= n <= 10^5",
+"inputFormat": "Array of integers",
+"outputFormat": "Return integer sum",
+"testCases": [
+{"input":"[1,2,3,4]","expectedOutput":"10","isPublic":true},
+{"input":"[5,5,5]","expectedOutput":"15","isPublic":true},
+{"input":"[-1,1]","expectedOutput":"0","isPublic":false}
+]
+},
+{
+"title": "Check if a string is a palindrome",
+"description": "Return true if the string reads the same forward and backward ignoring case.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["strings","two-pointers"],
+"companies": ["Google"],
+"constraints": "1 <= length <= 10^5",
+"inputFormat": "String",
+"outputFormat": "Return boolean",
+"testCases": [
+{"input":"\"racecar\"","expectedOutput":"true","isPublic":true},
+{"input":"\"hello\"","expectedOutput":"false","isPublic":true},
+{"input":"\"Level\"","expectedOutput":"true","isPublic":false}
+]
+},
+{
+"title": "Reverse a string",
+"description": "Return the reversed version of the input string.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["strings","two-pointers"],
+"companies": ["Amazon"],
+"constraints": "1 <= length <= 10^5",
+"inputFormat": "String",
+"outputFormat": "Return reversed string",
+"testCases": [
+{"input":"\"hello\"","expectedOutput":"\"olleh\"","isPublic":true},
+{"input":"\"abc\"","expectedOutput":"\"cba\"","isPublic":true},
+{"input":"\"interview\"","expectedOutput":"\"weivretni\"","isPublic":false}
+]
+},
+{
+"title": "Find index of target element in array",
+"description": "Return the index of the target element in the array. Return -1 if not found.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["arrays"],
+"companies": ["Amazon"],
+"constraints": "1 <= n <= 10^5",
+"inputFormat": "[array, target]",
+"outputFormat": "Return index",
+"testCases": [
+{"input":"[[1,2,3,4],3]","expectedOutput":"2","isPublic":true},
+{"input":"[[5,6,7],8]","expectedOutput":"-1","isPublic":true},
+{"input":"[[10],10]","expectedOutput":"0","isPublic":false}
+]
+},
+{
+"title": "Count occurrences of a character in a string",
+"description": "Return how many times the given character appears in the string.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["strings","hashmap"],
+"companies": ["Amazon"],
+"constraints": "1 <= length <= 10^5",
+"inputFormat": "[string, character]",
+"outputFormat": "Return count",
+"testCases": [
+{"input":"[\"banana\",\"a\"]","expectedOutput":"3","isPublic":true},
+{"input":"[\"apple\",\"p\"]","expectedOutput":"2","isPublic":true},
+{"input":"[\"test\",\"z\"]","expectedOutput":"0","isPublic":false}
+]
+},
+{
+"title": "Check if two strings are anagrams",
+"description": "Return true if both strings contain the same characters with the same frequencies.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["strings","hashmap"],
+"companies": ["Amazon","Google"],
+"constraints": "1 <= length <= 10^5",
+"inputFormat": "[string1, string2]",
+"outputFormat": "Return boolean",
+"testCases": [
+{"input":"[\"listen\",\"silent\"]","expectedOutput":"true","isPublic":true},
+{"input":"[\"hello\",\"world\"]","expectedOutput":"false","isPublic":true},
+{"input":"[\"evil\",\"vile\"]","expectedOutput":"true","isPublic":false}
+]
+},
+{
+"title": "Remove duplicates from an array",
+"description": "Return an array containing only unique elements while preserving order.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["arrays","hashmap"],
+"companies": ["Amazon"],
+"constraints": "1 <= n <= 10^5",
+"inputFormat": "Array of integers",
+"outputFormat": "Return array of unique elements",
+"testCases": [
+{"input":"[1,2,2,3,3,4]","expectedOutput":"[1,2,3,4]","isPublic":true},
+{"input":"[5,5,5]","expectedOutput":"[5]","isPublic":true},
+{"input":"[1,2,3]","expectedOutput":"[1,2,3]","isPublic":false}
+]
+},
+{
+"title": "Find length of a string",
+"description": "Return the number of characters in the string.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["strings"],
+"companies": ["Amazon"],
+"constraints": "1 <= length <= 10^5",
+"inputFormat": "String",
+"outputFormat": "Return integer length",
+"testCases": [
+{"input":"\"hello\"","expectedOutput":"5","isPublic":true},
+{"input":"\"\"","expectedOutput":"0","isPublic":true},
+{"input":"\"interview\"","expectedOutput":"9","isPublic":false}
+]
+},
+{
+"title": "Two Sum",
+"description": "Given an array of integers and a target value, return the indices of the two numbers that add up to the target.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["arrays","hashmap"],
+"companies": ["Amazon","Google"],
+"constraints": "2 <= n <= 10^5",
+"inputFormat": "[array, target]",
+"outputFormat": "Return array of two indices",
+"testCases": [
+{"input":"[[2,7,11,15],9]","expectedOutput":"[0,1]","isPublic":true},
+{"input":"[[3,2,4],6]","expectedOutput":"[1,2]","isPublic":true},
+{"input":"[[3,3],6]","expectedOutput":"[0,1]","isPublic":false}
+]
+},
+{
+"title": "Binary Search",
+"description": "Given a sorted array and a target value, return the index of the target or -1 if it does not exist.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["binary-search","arrays"],
+"companies": ["Amazon"],
+"constraints": "1 <= n <= 10^5",
+"inputFormat": "[array, target]",
+"outputFormat": "Return index",
+"testCases": [
+{"input":"[[1,2,3,4,5],4]","expectedOutput":"3","isPublic":true},
+{"input":"[[1,2,3,4,5],6]","expectedOutput":"-1","isPublic":true},
+{"input":"[[10],10]","expectedOutput":"0","isPublic":false}
+]
+},
+{
+"title": "Longest Common Prefix",
+"description": "Given an array of strings, return the longest common prefix shared by all strings.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["strings"],
+"companies": ["Amazon"],
+"constraints": "1 <= n <= 10^4",
+"inputFormat": "Array of strings",
+"outputFormat": "Return string prefix",
+"testCases": [
+{"input":"[\"flower\",\"flow\",\"flight\"]","expectedOutput":"\"fl\"","isPublic":true},
+{"input":"[\"dog\",\"racecar\",\"car\"]","expectedOutput":"\"\"","isPublic":true},
+{"input":"[\"interview\",\"internet\",\"internal\"]","expectedOutput":"\"inter\"","isPublic":false}
+]
+},
+{
+"title": "Valid Parentheses",
+"description": "Given a string containing only parentheses characters, determine if the string is valid.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["stack","strings"],
+"companies": ["Google","Amazon"],
+"constraints": "1 <= length <= 10^5",
+"inputFormat": "String",
+"outputFormat": "Return boolean",
+"testCases": [
+{"input":"\"()[]{}\"","expectedOutput":"true","isPublic":true},
+{"input":"\"(]\"","expectedOutput":"false","isPublic":true},
+{"input":"\"({[]})\"","expectedOutput":"true","isPublic":false}
+]
+},
+{
+"title": "Merge Two Sorted Arrays",
+"description": "Given two sorted arrays, return a single merged sorted array.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["arrays","two-pointers"],
+"companies": ["Amazon"],
+"constraints": "1 <= n <= 10^5",
+"inputFormat": "[array1, array2]",
+"outputFormat": "Return merged array",
+"testCases": [
+{"input":"[[1,3,5],[2,4,6]]","expectedOutput":"[1,2,3,4,5,6]","isPublic":true},
+{"input":"[[1],[2]]","expectedOutput":"[1,2]","isPublic":true},
+{"input":"[[1,2,3],[]]","expectedOutput":"[1,2,3]","isPublic":false}
+]
+},
+{
+"title": "Move Zeros to End",
+"description": "Given an array, move all zeros to the end while maintaining the order of non-zero elements.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["arrays","two-pointers"],
+"companies": ["Google"],
+"constraints": "1 <= n <= 10^5",
+"inputFormat": "Array",
+"outputFormat": "Return modified array",
+"testCases": [
+{"input":"[0,1,0,3,12]","expectedOutput":"[1,3,12,0,0]","isPublic":true},
+{"input":"[1,2,3]","expectedOutput":"[1,2,3]","isPublic":true},
+{"input":"[0,0,1]","expectedOutput":"[1,0,0]","isPublic":false}
+]
+},
+{
+"title": "Find Missing Number",
+"description": "Given an array containing numbers from 0 to n with one number missing, return the missing number.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["arrays"],
+"companies": ["Amazon"],
+"constraints": "1 <= n <= 10^5",
+"inputFormat": "Array",
+"outputFormat": "Return missing number",
+"testCases": [
+{"input":"[3,0,1]","expectedOutput":"2","isPublic":true},
+{"input":"[0,1]","expectedOutput":"2","isPublic":true},
+{"input":"[9,6,4,2,3,5,7,0,1]","expectedOutput":"8","isPublic":false}
+]
+},
+{
+"title": "Majority Element",
+"description": "Find the element that appears more than n/2 times in the array.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["arrays","hashmap"],
+"companies": ["Amazon"],
+"constraints": "1 <= n <= 10^5",
+"inputFormat": "Array",
+"outputFormat": "Return element",
+"testCases": [
+{"input":"[3,2,3]","expectedOutput":"3","isPublic":true},
+{"input":"[2,2,1,1,1,2,2]","expectedOutput":"2","isPublic":true},
+{"input":"[1]","expectedOutput":"1","isPublic":false}
+]
+},
+{
+"title": "Find First Non-Repeating Character",
+"description": "Return the first character that appears exactly once in the string.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["strings","hashmap"],
+"companies": ["Amazon"],
+"constraints": "1 <= length <= 10^5",
+"inputFormat": "String",
+"outputFormat": "Return character or -1",
+"testCases": [
+{"input":"\"leetcode\"","expectedOutput":"\"l\"","isPublic":true},
+{"input":"\"aabb\"","expectedOutput":"-1","isPublic":true},
+{"input":"\"loveleetcode\"","expectedOutput":"\"v\"","isPublic":false}
+]
+},
+{
+"title": "Check if Array is Sorted",
+"description": "Return true if the array is sorted in non-decreasing order.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["arrays"],
+"companies": ["Amazon"],
+"constraints": "1 <= n <= 10^5",
+"inputFormat": "Array",
+"outputFormat": "Return boolean",
+"testCases": [
+{"input":"[1,2,3,4]","expectedOutput":"true","isPublic":true},
+{"input":"[1,3,2]","expectedOutput":"false","isPublic":true},
+{"input":"[5]","expectedOutput":"true","isPublic":false}
+]
+},
+{
+"title": "Longest Substring Without Repeating Characters",
+"description": "Given a string, return the length of the longest substring without repeating characters.",
+"difficulty": "medium",
+"type": "coding",
+"topics": ["strings","sliding-window","hashmap"],
+"companies": ["Amazon","Google"],
+"constraints": "1 <= length <= 10^5",
+"inputFormat": "String",
+"outputFormat": "Return integer length",
+"testCases": [
+{"input":"\"abcabcbb\"","expectedOutput":"3","isPublic":true},
+{"input":"\"bbbbb\"","expectedOutput":"1","isPublic":true},
+{"input":"\"pwwkew\"","expectedOutput":"3","isPublic":false}
+]
+},
+{
+"title": "Rotate Array",
+"description": "Given an array and an integer k, rotate the array to the right by k steps.",
+"difficulty": "medium",
+"type": "coding",
+"topics": ["arrays"],
+"companies": ["Amazon"],
+"constraints": "1 <= n <= 10^5",
+"inputFormat": "[array, k]",
+"outputFormat": "Return rotated array",
+"testCases": [
+{"input":"[[1,2,3,4,5,6,7],3]","expectedOutput":"[5,6,7,1,2,3,4]","isPublic":true},
+{"input":"[[-1,-100,3,99],2]","expectedOutput":"[3,99,-1,-100]","isPublic":true},
+{"input":"[[1,2],1]","expectedOutput":"[2,1]","isPublic":false}
+]
+},
+{
+"title": "Product of Array Except Self",
+"description": "Return an array where each element is the product of all other elements except itself.",
+"difficulty": "medium",
+"type": "coding",
+"topics": ["arrays"],
+"companies": ["Google","Amazon"],
+"constraints": "2 <= n <= 10^5",
+"inputFormat": "Array",
+"outputFormat": "Return array",
+"testCases": [
+{"input":"[1,2,3,4]","expectedOutput":"[24,12,8,6]","isPublic":true},
+{"input":"[2,3,4]","expectedOutput":"[12,8,6]","isPublic":true},
+{"input":"[1,1,1,1]","expectedOutput":"[1,1,1,1]","isPublic":false}
+]
+},
+{
+"title": "Maximum Subarray Sum",
+"description": "Return the maximum possible sum of a contiguous subarray.",
+"difficulty": "medium",
+"type": "coding",
+"topics": ["arrays","dynamic-programming"],
+"companies": ["Amazon","Google"],
+"constraints": "1 <= n <= 10^5",
+"inputFormat": "Array",
+"outputFormat": "Return maximum sum",
+"testCases": [
+{"input":"[-2,1,-3,4,-1,2,1,-5,4]","expectedOutput":"6","isPublic":true},
+{"input":"[1]","expectedOutput":"1","isPublic":true},
+{"input":"[5,4,-1,7,8]","expectedOutput":"23","isPublic":false}
+]
+},
+{
+"title": "Find Peak Element",
+"description": "Return the index of a peak element where the value is greater than its neighbors.",
+"difficulty": "medium",
+"type": "coding",
+"topics": ["arrays","binary-search"],
+"companies": ["Google"],
+"constraints": "1 <= n <= 10^5",
+"inputFormat": "Array",
+"outputFormat": "Return index",
+"testCases": [
+{"input":"[1,2,3,1]","expectedOutput":"2","isPublic":true},
+{"input":"[1,2,1,3,5,6,4]","expectedOutput":"5","isPublic":true},
+{"input":"[1]","expectedOutput":"0","isPublic":false}
+]
+},
+{
+"title": "Reverse Linked List",
+"description": "Given the head of a singly linked list, return the reversed list.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["linked-list"],
+"companies": ["Amazon"],
+"constraints": "1 <= n <= 10^5",
+"inputFormat": "Array representing linked list",
+"outputFormat": "Return reversed array",
+"testCases": [
+{"input":"[1,2,3,4,5]","expectedOutput":"[5,4,3,2,1]","isPublic":true},
+{"input":"[1,2]","expectedOutput":"[2,1]","isPublic":true},
+{"input":"[1]","expectedOutput":"[1]","isPublic":false}
+]
+},
+{
+"title": "Detect Cycle in Linked List",
+"description": "Determine if a linked list contains a cycle.",
+"difficulty": "medium",
+"type": "coding",
+"topics": ["linked-list","two-pointers"],
+"companies": ["Amazon","Google"],
+"constraints": "1 <= n <= 10^5",
+"inputFormat": "Array with cycle index (-1 if none)",
+"outputFormat": "Return boolean",
+"testCases": [
+{"input":"[[3,2,0,-4],1]","expectedOutput":"true","isPublic":true},
+{"input":"[[1,2],0]","expectedOutput":"true","isPublic":true},
+{"input":"[[1],-1]","expectedOutput":"false","isPublic":false}
+]
+},
+{
+"title": "Find Intersection of Two Arrays",
+"description": "Return the intersection of two arrays without duplicates.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["arrays","hashmap"],
+"companies": ["Amazon"],
+"constraints": "1 <= n <= 10^5",
+"inputFormat": "[array1, array2]",
+"outputFormat": "Return array",
+"testCases": [
+{"input":"[[1,2,2,1],[2,2]]","expectedOutput":"[2]","isPublic":true},
+{"input":"[[4,9,5],[9,4,9,8,4]]","expectedOutput":"[4,9]","isPublic":true},
+{"input":"[[1,2,3],[4,5]]","expectedOutput":"[]","isPublic":false}
+]
+},
+{
+"title": "Valid Anagram",
+"description": "Return true if two strings are anagrams of each other.",
+"difficulty": "easy",
+"type": "coding",
+"topics": ["strings","hashmap"],
+"companies": ["Amazon"],
+"constraints": "1 <= length <= 10^5",
+"inputFormat": "[string1, string2]",
+"outputFormat": "Return boolean",
+"testCases": [
+{"input":"[\"anagram\",\"nagaram\"]","expectedOutput":"true","isPublic":true},
+{"input":"[\"rat\",\"car\"]","expectedOutput":"false","isPublic":true},
+{"input":"[\"listen\",\"silent\"]","expectedOutput":"true","isPublic":false}
+]
+},
+{
+"title": "Sliding Window Maximum",
+"description": "Return the maximum value in every sliding window of size k.",
+"difficulty": "hard",
+"type": "coding",
+"topics": ["sliding-window","deque"],
+"companies": ["Google"],
+"constraints": "1 <= n <= 10^5",
+"inputFormat": "[array, k]",
+"outputFormat": "Return array",
+"testCases": [
+{"input":"[[1,3,-1,-3,5,3,6,7],3]","expectedOutput":"[3,3,5,5,6,7]","isPublic":true},
+{"input":"[[1],1]","expectedOutput":"[1]","isPublic":true},
+{"input":"[[9,11],2]","expectedOutput":"[11]","isPublic":false}
+]
+}
+  ]
+}

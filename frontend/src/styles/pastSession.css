@@ -1,0 +1,21 @@
+
+
+
+.filter-chip {
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  cursor: pointer;
+}
+
+.filter-chip.active {
+  background: #3ecf8e;
+  color: black;
+}
+
+
+.marks{
+    border-inline: 1px solid var(--border-muted);
+    height: fit-content;
+}
+

@@ -1,0 +1,85 @@
+.stats-grid,.recommended-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minMax(200px, 1fr));
+    gap: 1rem;
+    grid-auto-flow: dense;
+}
+.recentSessionGrid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minMax(320px, 1fr));
+  gap: 1rem;
+  grid-auto-flow: dense;
+}
+.session-card{
+  border-radius: 14px;
+  border: 1px solid var(--border-muted);
+  box-shadow: var(--shadow-soft);
+}
+.session-card:hover{
+  border-color: var(--border-subtle);
+}
+.stat-card{
+  background-color: var(--bg-tertiary);
+  border-radius: 14px;
+  padding: 16px 16px;
+  border: 1px solid var(--border-muted);
+  box-shadow: var(--shadow-soft);
+}
+.stat-card:hover{
+  border-color: var(--border-subtle);
+}
+.dashboard{
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.practiceCard{
+    border: 1px solid var(--border-muted);
+    border-radius: 14px;
+    box-shadow: var(--shadow-soft);
+}
+.roundTop{
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+.roundBottom{
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+}
+.practiceCard .visual svg{
+  width: 48px;
+  height: 48px;
+  stroke-width: 1.2;
+  opacity: 0.85;
+  transition: color 150ms ease;
+  color: var(--text-secondary);
+}
+.practiceCard .visual{
+    border-bottom: 1px solid var(--border-muted);
+}
+.practiceCard:hover{
+    border-color: var(--border-subtle);
+}
+.practiceCard:hover .practiceText{
+    color: var(--accent-hover);
+}
+
+.arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  animation: arrowFloat 1.6s ease-in-out infinite;
+}
+
+
+.outcome-strong {
+  color: #3ecf8e;
+}
+
+.outcome-good {
+  color: #60a5fa;
+}
+
+.outcome-weak {
+  color: #f59e0b;
+}

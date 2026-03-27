@@ -1,0 +1,1621 @@
+{
+  "subject": "node",
+  "questions": [
+    {
+"title": "Explain how the Node.js event loop works",
+"description": "Describe the architecture of the Node.js event loop. Explain its phases, how asynchronous callbacks are scheduled, and why Node.js can handle large numbers of concurrent connections.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["event-loop","node-fundamentals"],
+"companies": ["Amazon","PayPal","Netflix"]
+},
+{
+"title": "Explain why Node.js is considered non-blocking",
+"description": "Explain what non-blocking I/O means in Node.js and how it differs from traditional multi-threaded server models.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["node-fundamentals","async-programming"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the phases of the Node.js event loop",
+"description": "Describe the different phases of the Node.js event loop including timers, pending callbacks, idle, poll, check, and close callbacks.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["event-loop"],
+"companies": ["Amazon","Google"]
+},
+{
+"title": "Explain the difference between process.nextTick and setImmediate",
+"description": "Explain when process.nextTick and setImmediate callbacks are executed and how they differ in the event loop.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["event-loop","async-programming"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the difference between setTimeout and setImmediate",
+"description": "Explain how Node.js schedules setTimeout and setImmediate callbacks and when each one executes.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["event-loop"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how asynchronous programming works in Node.js",
+"description": "Explain callback-based asynchronous programming and why Node.js relies heavily on async patterns.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["async-programming"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain callback hell and how it can be avoided",
+"description": "Explain the problem of nested callbacks and discuss strategies such as promises and async/await.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["async-programming"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how promises work in Node.js",
+"description": "Explain the lifecycle of a promise including pending, fulfilled, and rejected states.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["async-programming"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain async/await and how it simplifies asynchronous code",
+"description": "Explain how async functions and await improve readability of asynchronous logic compared to promises.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["async-programming"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how Node.js handles concurrency despite being single-threaded",
+"description": "Explain how Node.js uses the event loop and libuv thread pool to handle concurrent tasks.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["event-loop","node-fundamentals"],
+"companies": ["Amazon","Netflix"]
+},
+{
+"title": "Explain the role of libuv in Node.js",
+"description": "Explain how libuv provides asynchronous I/O operations and manages the event loop.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["node-internals"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the purpose of streams in Node.js",
+"description": "Explain how streams allow processing data in chunks instead of loading entire datasets into memory.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["streams"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain the different types of streams in Node.js",
+"description": "Explain readable, writable, duplex, and transform streams.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["streams"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain backpressure in Node.js streams",
+"description": "Explain how backpressure prevents memory overload when consuming streams.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["streams","performance"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain the architecture of an Express.js application",
+"description": "Describe how Express handles requests, routes, middleware, and responses.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["express"],
+"companies": ["Uber"]
+},
+{
+"title": "Explain how Express middleware works",
+"description": "Explain the middleware pattern used in Express and how request flow moves through middleware functions.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["express","middleware"],
+"companies": ["Uber"]
+},
+{
+"title": "Explain the difference between application middleware and router middleware",
+"description": "Explain how middleware functions can be applied globally or to specific routers.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["express","middleware"],
+"companies": ["Uber"]
+},
+{
+"title": "Explain the purpose of next() in Express middleware",
+"description": "Explain how next() passes control to the next middleware function.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["express","middleware"],
+"companies": ["Uber"]
+},
+{
+"title": "Explain error handling middleware in Express",
+"description": "Explain how Express handles errors using middleware functions with four parameters.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["express","error-handling"],
+"companies": ["Uber"]
+},
+{
+"title": "Explain the difference between synchronous and asynchronous middleware",
+"description": "Explain how errors propagate differently in async middleware.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["express","async-programming"],
+"companies": ["Uber"]
+},
+{
+"title": "Explain how Express handles routing",
+"description": "Explain how Express matches routes using HTTP methods and route patterns.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["express","routing"],
+"companies": ["Uber"]
+},
+{
+"title": "Explain REST API design principles",
+"description": "Explain the architectural constraints that define RESTful APIs.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["api-design","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain idempotency in HTTP APIs",
+"description": "Explain which HTTP methods are idempotent and why idempotency matters in distributed systems.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["api-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how authentication works in Express applications",
+"description": "Explain common authentication strategies such as sessions and token-based authentication.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["security","express"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain JWT authentication in Node.js applications",
+"description": "Explain how JSON Web Tokens are used to authenticate API requests.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["security","authentication"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain common security vulnerabilities in Node.js applications",
+"description": "Discuss vulnerabilities such as XSS, CSRF, and injection attacks.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["security"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain rate limiting and why it is used in APIs",
+"description": "Explain how rate limiting protects APIs from abuse.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["security","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how Node.js applications handle file uploads",
+"description": "Explain architectural approaches for handling file uploads in Node applications.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["express","streams"],
+"companies": ["Uber"]
+},
+{
+"title": "Explain the difference between blocking and non-blocking code in Node.js",
+"description": "Explain how blocking operations can degrade performance in Node.js servers.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["node-fundamentals"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain architectural considerations when building scalable Node.js APIs",
+"description": "Discuss strategies such as horizontal scaling, caching, and load balancing.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["backend-architecture","performance"],
+"companies": ["Amazon","Netflix"]
+},
+{
+"title": "Explain the request lifecycle in an Express application",
+"description": "Describe the full lifecycle of an HTTP request in an Express application from the moment it reaches the server until the response is sent. Include routing, middleware execution, and response handling.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["express","backend-architecture"],
+"companies": ["Uber","Amazon"]
+},
+{
+"title": "Explain how middleware chains work in Express",
+"description": "Describe how Express executes middleware functions sequentially and how control is passed through the middleware chain.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["express","middleware"],
+"companies": ["Uber"]
+},
+{
+"title": "Explain how to structure a large Express application",
+"description": "Explain architectural approaches for organizing routes, controllers, services, and utilities in large Express applications.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["express","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the difference between controllers and services in backend architecture",
+"description": "Explain how controllers handle HTTP logic while services contain business logic in well-structured backend systems.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain dependency injection in Node.js backend architecture",
+"description": "Explain the concept of dependency injection and how it improves modularity and testability in backend systems.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["backend-architecture"],
+"companies": ["Google"]
+},
+{
+"title": "Explain how to implement centralized error handling in Express",
+"description": "Explain why centralized error handling improves maintainability and how Express error middleware can be used to implement it.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["express","error-handling"],
+"companies": ["Uber"]
+},
+{
+"title": "Explain API versioning strategies",
+"description": "Explain why API versioning is necessary and compare different strategies such as URL versioning, header versioning, and query parameters.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["api-design","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain pagination strategies in backend APIs",
+"description": "Explain offset pagination, cursor pagination, and when each approach should be used.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["api-design","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how caching improves backend performance",
+"description": "Explain different caching layers such as in-memory caching, distributed caching, and CDN caching.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["caching","performance"],
+"companies": ["Netflix","Amazon"]
+},
+{
+"title": "Explain cache invalidation strategies",
+"description": "Explain common strategies for invalidating cached data when underlying data changes.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["caching","backend-architecture"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain how Node.js applications scale horizontally",
+"description": "Explain how load balancing and stateless services enable horizontal scaling.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["scalability","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the Node.js cluster module",
+"description": "Explain how the cluster module allows Node.js applications to use multiple CPU cores.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["node-internals","scalability"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain worker threads in Node.js",
+"description": "Explain when worker threads should be used instead of the event loop.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["node-internals","performance"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain how to prevent blocking the Node.js event loop",
+"description": "Explain common sources of blocking operations and how to avoid them.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["event-loop","performance"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how logging should be implemented in backend systems",
+"description": "Explain structured logging and why it is important for debugging production systems.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["logging","backend-architecture"],
+"companies": ["Uber"]
+},
+{
+"title": "Explain observability in backend systems",
+"description": "Explain the concepts of logs, metrics, and traces and why they are important in production systems.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["observability","backend-architecture"],
+"companies": ["Google"]
+},
+{
+"title": "Explain distributed tracing",
+"description": "Explain how distributed tracing helps identify latency issues in microservices architectures.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["observability","backend-architecture"],
+"companies": ["Google"]
+},
+{
+"title": "Explain rate limiting implementation strategies in Node APIs",
+"description": "Explain algorithms like token bucket and leaky bucket used for API rate limiting.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["security","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how API gateways work in microservice architectures",
+"description": "Explain the responsibilities of an API gateway and why it is used.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["backend-architecture","microservices"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain service-to-service communication strategies",
+"description": "Explain synchronous and asynchronous communication patterns between services.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["microservices","backend-architecture"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain message queues and their use in backend systems",
+"description": "Explain how message queues enable asynchronous communication between services.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["backend-architecture","microservices"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the role of WebSockets in real-time applications",
+"description": "Explain how WebSockets enable persistent communication between client and server.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["websockets","backend-architecture"],
+"companies": ["Uber"]
+},
+{
+"title": "Explain the difference between WebSockets and HTTP polling",
+"description": "Explain why WebSockets are often preferred for real-time systems.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["websockets"],
+"companies": ["Uber"]
+},
+{
+"title": "Explain the difference between REST and GraphQL APIs",
+"description": "Explain how REST and GraphQL differ in terms of data fetching flexibility and complexity.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["api-design"],
+"companies": ["Facebook","Shopify"]
+},
+{
+"title": "Explain API idempotency in distributed systems",
+"description": "Explain why idempotency is important when designing reliable APIs.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["api-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain backend strategies for handling large file uploads",
+"description": "Explain how streaming uploads prevents memory overload.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["streams","backend-architecture"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain security best practices for Express applications",
+"description": "Discuss strategies such as input validation, helmet middleware, and secure headers.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["security","express"],
+"companies": ["Uber"]
+},
+{
+"title": "Explain the importance of input validation in backend APIs",
+"description": "Explain how validation prevents injection attacks and data corruption.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["security","api-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the concept of graceful shutdown in Node.js servers",
+"description": "Explain why servers should gracefully handle termination signals to avoid dropping active requests.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["backend-architecture","node-fundamentals"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain architectural considerations when designing high-throughput APIs",
+"description": "Explain strategies such as caching, load balancing, and horizontal scaling.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["backend-architecture","scalability","performance"],
+"companies": ["Amazon","Netflix"]
+},
+{
+"title": "Explain how memory management works in Node.js",
+"description": "Describe how Node.js manages memory through the V8 engine, including heap allocation and garbage collection.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["node-internals","performance"],
+"companies": ["Google","Netflix"]
+},
+{
+"title": "Explain garbage collection in the V8 engine",
+"description": "Explain how V8 performs garbage collection and how it identifies unused memory in Node.js applications.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["node-internals"],
+"companies": ["Google"]
+},
+{
+"title": "Explain memory leaks in Node.js applications",
+"description": "Explain common causes of memory leaks in Node.js applications and strategies to detect and prevent them.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["performance","node-internals"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain how connection pooling works for databases",
+"description": "Explain why connection pooling is important when building backend APIs that interact with databases.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["backend-architecture","database-integration"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how transactions work in backend systems",
+"description": "Explain the concept of database transactions and why they are important for maintaining data consistency.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-integration","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the difference between vertical scaling and horizontal scaling",
+"description": "Explain how systems scale by increasing resources on a single machine versus distributing load across multiple machines.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["scalability","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain load balancing in backend systems",
+"description": "Explain how load balancers distribute incoming traffic across multiple servers.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["scalability","backend-architecture"],
+"companies": ["Amazon","Netflix"]
+},
+{
+"title": "Explain sticky sessions and their impact on scalability",
+"description": "Explain how sticky sessions work and why they may create challenges when scaling backend systems.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["scalability","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the difference between synchronous and asynchronous communication between services",
+"description": "Explain the trade-offs between synchronous request-response communication and asynchronous messaging systems.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["microservices","backend-architecture"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain event-driven architecture",
+"description": "Explain how event-driven systems use events to trigger actions across distributed services.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["microservices","backend-architecture"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain background job processing in backend systems",
+"description": "Explain how background workers process tasks that should not block HTTP request processing.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["backend-architecture"],
+"companies": ["Uber"]
+},
+{
+"title": "Explain job queues and their role in backend systems",
+"description": "Explain how job queues enable asynchronous processing of tasks such as sending emails or generating reports.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["backend-architecture"],
+"companies": ["Uber"]
+},
+{
+"title": "Explain idempotent job processing",
+"description": "Explain how backend systems ensure tasks can be retried safely without producing duplicate results.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain retry strategies in distributed systems",
+"description": "Explain how retry strategies handle transient failures while avoiding cascading failures.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["backend-architecture","microservices"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain exponential backoff in retry mechanisms",
+"description": "Explain how exponential backoff reduces pressure on failing services.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the circuit breaker pattern",
+"description": "Explain how circuit breakers prevent cascading failures in distributed systems.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["backend-architecture","microservices"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain distributed caching strategies",
+"description": "Explain how distributed caches improve performance and reduce database load.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["caching","backend-architecture"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain cache-aside pattern",
+"description": "Explain how the cache-aside pattern works and when it should be used.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["caching"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain write-through caching",
+"description": "Explain how write-through caching keeps cache and database data consistent.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["caching"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain rate limiting strategies used in backend APIs",
+"description": "Explain techniques used to limit API request frequency to protect backend services.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["security","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain API throttling and how it differs from rate limiting",
+"description": "Explain how throttling slows down request processing when limits are exceeded.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["api-design","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how backend systems protect against distributed denial-of-service attacks",
+"description": "Explain strategies such as rate limiting, traffic filtering, and load balancing.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["security","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the difference between authentication and authorization",
+"description": "Explain how authentication verifies identity while authorization controls access to resources.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["security"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain OAuth authentication",
+"description": "Explain how OAuth enables secure third-party authentication flows.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["security","authentication"],
+"companies": ["Google"]
+},
+{
+"title": "Explain how refresh tokens work in authentication systems",
+"description": "Explain how refresh tokens enable secure session renewal without requiring users to log in again.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["authentication"],
+"companies": ["Google"]
+},
+{
+"title": "Explain stateless backend architecture",
+"description": "Explain why stateless servers simplify horizontal scaling.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["backend-architecture","scalability"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain session management strategies in backend systems",
+"description": "Explain how backend systems store and manage user sessions.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["backend-architecture","authentication"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain API gateway responsibilities",
+"description": "Explain how API gateways manage routing, authentication, rate limiting, and monitoring.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["microservices","backend-architecture"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain the role of service discovery in microservices",
+"description": "Explain how services dynamically locate each other in distributed systems.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["microservices","backend-architecture"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain observability challenges in distributed systems",
+"description": "Explain why monitoring distributed systems is complex and how logging, metrics, and tracing help solve this.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["observability","backend-architecture"],
+"companies": ["Google"]
+},
+{
+"title": "Explain how to debug performance issues in Node.js applications",
+"description": "Describe techniques developers use to identify and diagnose performance bottlenecks in Node.js applications, including profiling and monitoring tools.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["performance","node-internals"],
+"companies": ["Netflix","Amazon"]
+},
+{
+"title": "Explain CPU profiling in Node.js",
+"description": "Explain how CPU profiling helps identify expensive operations that block the event loop.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["performance","node-internals"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain memory profiling in Node.js applications",
+"description": "Explain how memory profiling tools help detect memory leaks and inefficient memory usage.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["performance","node-internals"],
+"companies": ["Google"]
+},
+{
+"title": "Explain the concept of backpressure in backend systems",
+"description": "Explain how backpressure prevents systems from being overwhelmed when downstream components cannot process data fast enough.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["backend-architecture","performance"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain the CAP theorem",
+"description": "Explain the CAP theorem and the trade-offs between consistency, availability, and partition tolerance in distributed systems.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["distributed-systems","backend-architecture"],
+"companies": ["Amazon","Google"]
+},
+{
+"title": "Explain consistency models in distributed systems",
+"description": "Explain strong consistency, eventual consistency, and when each model is used.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["distributed-systems"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the difference between monolithic and microservice architectures",
+"description": "Explain the advantages and disadvantages of monolithic and microservice architectures.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["backend-architecture","microservices"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain service decomposition in microservices",
+"description": "Explain how large applications are broken into smaller independent services.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["microservices","backend-architecture"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain the problem of distributed transactions",
+"description": "Explain why maintaining consistency across multiple services is difficult in distributed systems.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["distributed-systems","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the saga pattern",
+"description": "Explain how the saga pattern manages distributed transactions across multiple services.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["microservices","backend-architecture"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain event sourcing architecture",
+"description": "Explain how event sourcing stores state changes as events instead of overwriting data.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["backend-architecture","event-driven-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the CQRS pattern",
+"description": "Explain how CQRS separates read and write models to improve scalability and performance.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["backend-architecture","cqrs"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how distributed locks work",
+"description": "Explain how distributed systems coordinate access to shared resources using distributed locking mechanisms.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["distributed-systems"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the thundering herd problem",
+"description": "Explain how many clients requesting the same resource simultaneously can overload systems.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["performance","backend-architecture"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain how backend systems handle spikes in traffic",
+"description": "Explain architectural strategies such as auto-scaling, caching, and load balancing.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["scalability","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain cold start problems in backend systems",
+"description": "Explain why serverless or newly started services may experience slower response times.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["backend-architecture","performance"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain graceful degradation in system design",
+"description": "Explain how systems maintain partial functionality when components fail.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["backend-architecture","reliability"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain fault tolerance in backend systems",
+"description": "Explain how systems remain operational even when components fail.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["backend-architecture","reliability"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain redundancy in distributed systems",
+"description": "Explain how redundancy improves system reliability and availability.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["distributed-systems","reliability"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain blue-green deployments",
+"description": "Explain how blue-green deployments allow safe release of new application versions.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["deployment","backend-architecture"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain canary deployments",
+"description": "Explain how canary deployments release new features gradually to a subset of users.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["deployment","backend-architecture"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain the concept of infrastructure as code",
+"description": "Explain how infrastructure can be managed using configuration files and automation.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["deployment","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain containerization in backend systems",
+"description": "Explain how containers package applications and their dependencies for consistent deployment.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["deployment","backend-architecture"],
+"companies": ["Google"]
+},
+{
+"title": "Explain container orchestration",
+"description": "Explain how orchestration systems manage deployment, scaling, and networking of containers.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["deployment","backend-architecture"],
+"companies": ["Google"]
+},
+{
+"title": "Explain the role of reverse proxies in backend systems",
+"description": "Explain how reverse proxies manage traffic routing, caching, and load balancing.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["backend-architecture","scalability"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain the difference between edge caching and server caching",
+"description": "Explain how CDNs cache data closer to users compared to backend caches.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["caching","backend-architecture"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain how API rate limiting is implemented in distributed environments",
+"description": "Explain challenges of enforcing rate limits across multiple servers.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["security","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how distributed logs are aggregated",
+"description": "Explain how logs from multiple services are centralized for debugging and monitoring.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["observability","backend-architecture"],
+"companies": ["Google"]
+},
+{
+"title": "Explain monitoring alerts in backend systems",
+"description": "Explain how alerts are configured to detect abnormal system behavior.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["observability"],
+"companies": ["Google"]
+},
+{
+"title": "Explain the role of health checks in distributed systems",
+"description": "Explain how health checks allow orchestration systems to detect failing services.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["backend-architecture","reliability"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain how database indexing improves query performance",
+"description": "Explain how indexes allow databases to locate records faster compared to full table scans.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["database-integration","performance"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the trade-offs of using indexes in databases",
+"description": "Explain how indexes improve read performance but may slow down write operations and increase storage usage.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-integration","performance"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the difference between primary indexes and secondary indexes",
+"description": "Explain how primary indexes enforce uniqueness while secondary indexes improve search efficiency.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-integration"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain database connection pooling",
+"description": "Explain why backend systems reuse database connections instead of opening new ones for each request.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-integration","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how backend systems handle database connection limits",
+"description": "Explain strategies used to prevent backend systems from exhausting database connections.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-integration","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain query optimization techniques",
+"description": "Explain how backend systems optimize slow database queries through indexing, query restructuring, and caching.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-integration","performance"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the difference between relational and NoSQL databases",
+"description": "Explain how relational databases differ from NoSQL databases in terms of schema, consistency, and scalability.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["database-integration"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain eventual consistency in distributed databases",
+"description": "Explain how distributed databases allow temporary inconsistencies in exchange for higher availability.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["distributed-systems","database-integration"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain replication in distributed databases",
+"description": "Explain how database replication improves availability and read scalability.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-integration","scalability"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain database sharding",
+"description": "Explain how sharding distributes data across multiple database servers to improve scalability.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-integration","scalability"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the difference between vertical partitioning and horizontal partitioning",
+"description": "Explain how partitioning distributes data to improve performance and scalability.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-integration","scalability"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain read replicas in database systems",
+"description": "Explain how read replicas allow scaling read-heavy workloads.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-integration","scalability"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the difference between strong consistency and eventual consistency",
+"description": "Explain how different consistency models affect application behavior.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["distributed-systems","database-integration"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain distributed transactions",
+"description": "Explain why maintaining consistency across multiple services or databases is difficult.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["distributed-systems","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain the two-phase commit protocol",
+"description": "Explain how two-phase commit coordinates transactions across distributed systems.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["distributed-systems"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how backend systems prevent duplicate requests",
+"description": "Explain how idempotency keys help prevent duplicate API operations.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["api-design","backend-architecture"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain how distributed systems maintain data consistency",
+"description": "Explain architectural strategies used to maintain data consistency across services.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["distributed-systems","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how event ordering problems occur in distributed systems",
+"description": "Explain why events may arrive out of order and how systems address ordering issues.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["distributed-systems"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain idempotent APIs",
+"description": "Explain how APIs ensure repeated requests produce the same result without unintended side effects.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["api-design"],
+"companies": ["Stripe"]
+},
+{
+"title": "Explain API request validation strategies",
+"description": "Explain how backend APIs validate incoming requests to ensure correct data format and security.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["api-design","security"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how backend systems handle partial failures",
+"description": "Explain strategies for maintaining system reliability when some components fail.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["backend-architecture","reliability"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain retry queues in distributed systems",
+"description": "Explain how retry queues help recover from temporary failures in asynchronous systems.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["backend-architecture"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain dead letter queues",
+"description": "Explain how dead letter queues store messages that fail processing repeatedly.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["backend-architecture"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain the concept of idempotent message processing",
+"description": "Explain how systems ensure messages can be safely retried.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["distributed-systems"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how Node.js applications manage configuration",
+"description": "Explain how environment variables and configuration management are used in backend applications.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain secrets management in backend systems",
+"description": "Explain how backend applications securely manage secrets such as API keys and database credentials.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["security","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain service configuration across environments",
+"description": "Explain how applications manage configuration differences between development, staging, and production.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how backend systems ensure high availability",
+"description": "Explain strategies such as redundancy, failover systems, and load balancing.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["reliability","backend-architecture"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain how backend systems detect cascading failures",
+"description": "Explain how monitoring and circuit breakers prevent cascading system failures.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["backend-architecture","reliability"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain the difference between synchronous APIs and asynchronous APIs",
+"description": "Explain when backend systems should use synchronous or asynchronous communication patterns.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["api-design","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how Node.js handles DNS resolution",
+"description": "Explain how Node.js performs DNS lookups and how this affects request latency in backend systems.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["node-internals","networking"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain the difference between blocking and CPU-intensive tasks in Node.js",
+"description": "Explain how CPU-bound tasks can block the event loop and why they should be offloaded to worker threads.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["node-internals","performance"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain worker thread pools in Node.js",
+"description": "Explain how Node.js uses worker thread pools for expensive operations such as file system tasks.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["node-internals","performance"],
+"companies": ["Google"]
+},
+{
+"title": "Explain how Node.js handles file system operations asynchronously",
+"description": "Explain how Node.js offloads file system operations to libuv worker threads.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["node-internals","async-programming"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain the difference between event emitters and callbacks",
+"description": "Explain how Node.js event emitters allow loosely coupled event-driven programming.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["node-fundamentals","event-driven-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how event-driven systems scale",
+"description": "Explain how event-driven architecture improves scalability by decoupling services.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["event-driven-architecture","backend-architecture"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain message brokers in distributed systems",
+"description": "Explain how message brokers allow services to communicate asynchronously.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["backend-architecture","microservices"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain publish-subscribe messaging patterns",
+"description": "Explain how publish-subscribe systems allow multiple consumers to react to the same event.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["event-driven-architecture","microservices"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain message ordering issues in distributed messaging systems",
+"description": "Explain how distributed messaging systems may deliver events out of order and strategies to address it.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["distributed-systems"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain exactly-once message delivery semantics",
+"description": "Explain the challenges of implementing exactly-once delivery in distributed systems.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["distributed-systems"],
+"companies": ["Kafka"]
+},
+{
+"title": "Explain at-least-once and at-most-once delivery semantics",
+"description": "Explain the guarantees provided by different messaging delivery strategies.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["distributed-systems"],
+"companies": ["Kafka"]
+},
+{
+"title": "Explain how WebSocket servers scale",
+"description": "Explain challenges in scaling WebSocket connections across multiple servers.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["websockets","scalability"],
+"companies": ["Uber"]
+},
+{
+"title": "Explain state synchronization in real-time systems",
+"description": "Explain how systems maintain consistent state across multiple clients in real-time applications.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["real-time-data","backend-architecture"],
+"companies": ["Uber"]
+},
+{
+"title": "Explain leader election in distributed systems",
+"description": "Explain how distributed systems choose a leader node for coordination tasks.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["distributed-systems"],
+"companies": ["Google"]
+},
+{
+"title": "Explain distributed locks in high-concurrency systems",
+"description": "Explain how distributed locks prevent multiple services from modifying shared resources simultaneously.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["distributed-systems"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain system design trade-offs between consistency and availability",
+"description": "Explain how distributed systems must balance consistency and availability depending on requirements.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["distributed-systems","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain eventual consistency strategies in distributed systems",
+"description": "Explain techniques used to resolve data inconsistencies over time.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["distributed-systems"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain optimistic concurrency control",
+"description": "Explain how optimistic locking prevents concurrent write conflicts.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-integration"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain pessimistic locking strategies",
+"description": "Explain how pessimistic locks prevent multiple processes from modifying the same resource simultaneously.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-integration"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain distributed cache invalidation challenges",
+"description": "Explain why keeping caches consistent across distributed systems is difficult.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["caching","distributed-systems"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain hot partition problems in distributed databases",
+"description": "Explain how uneven data distribution causes certain database nodes to become overloaded.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["database-integration","scalability"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain read-after-write consistency",
+"description": "Explain why some distributed systems cannot guarantee immediate read consistency.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["distributed-systems"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain eventual consistency conflict resolution strategies",
+"description": "Explain how distributed systems resolve conflicting writes.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["distributed-systems"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain request tracing in distributed systems",
+"description": "Explain how request tracing helps track requests across multiple microservices.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["observability"],
+"companies": ["Google"]
+},
+{
+"title": "Explain service latency analysis",
+"description": "Explain how engineers identify slow services in distributed architectures.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["observability","performance"],
+"companies": ["Google"]
+},
+{
+"title": "Explain structured logging in backend systems",
+"description": "Explain why structured logs are easier to analyze compared to plain text logs.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["logging","observability"],
+"companies": ["Google"]
+},
+{
+"title": "Explain correlation IDs in distributed logging",
+"description": "Explain how correlation IDs allow tracing requests across services.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["observability"],
+"companies": ["Google"]
+},
+{
+"title": "Explain API gateway rate limiting implementation",
+"description": "Explain how API gateways enforce rate limits across distributed backend services.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["api-design","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain service mesh architecture",
+"description": "Explain how service meshes manage service-to-service communication in microservice systems.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["microservices","backend-architecture"],
+"companies": ["Google"]
+},
+{
+"title": "Explain system reliability engineering principles",
+"description": "Explain the core principles used to build reliable backend systems.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["reliability","backend-architecture"],
+"companies": ["Google"]
+},
+{
+"title": "Explain how the Node.js process lifecycle works",
+"description": "Explain the different stages of a Node.js process lifecycle including initialization, event loop execution, and termination.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["node-internals"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain Node.js process signals and how they are handled",
+"description": "Explain how Node.js applications respond to system signals such as SIGINT and SIGTERM.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["node-internals","backend-architecture"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain heap snapshots in Node.js debugging",
+"description": "Explain how heap snapshots help analyze memory usage and detect memory leaks.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["performance","node-internals"],
+"companies": ["Google"]
+},
+{
+"title": "Explain how to detect memory leaks in Node.js applications",
+"description": "Explain strategies used to identify memory leaks including profiling tools and heap analysis.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["performance","node-internals"],
+"companies": ["Google"]
+},
+{
+"title": "Explain how garbage collection pauses affect application performance",
+"description": "Explain how garbage collection cycles may introduce latency spikes in Node.js applications.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["node-internals","performance"],
+"companies": ["Google"]
+},
+{
+"title": "Explain async resource tracking in Node.js",
+"description": "Explain how Node.js tracks asynchronous operations internally using async hooks.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["node-internals","async-programming"],
+"companies": ["Google"]
+},
+{
+"title": "Explain the difference between child processes and worker threads",
+"description": "Explain how Node.js supports parallelism using child processes and worker threads.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["node-internals","performance"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain inter-process communication in Node.js",
+"description": "Explain how processes exchange messages using IPC mechanisms.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["node-internals"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain cluster-based scaling for Node.js applications",
+"description": "Explain how clustering allows Node.js applications to utilize multiple CPU cores.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["scalability","node-internals"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain how backend systems maintain high throughput",
+"description": "Explain architectural strategies used to handle large numbers of concurrent requests.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["performance","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain tail latency and why it matters in backend systems",
+"description": "Explain why rare slow requests can significantly impact system performance.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["performance","backend-architecture"],
+"companies": ["Google"]
+},
+{
+"title": "Explain the concept of request batching",
+"description": "Explain how batching requests reduces overhead and improves throughput.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["performance","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how backend systems implement retry policies safely",
+"description": "Explain how retries can improve reliability but must be implemented carefully to avoid overload.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["backend-architecture","reliability"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain how multi-region architectures improve reliability",
+"description": "Explain how deploying services across multiple regions increases fault tolerance.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["backend-architecture","distributed-systems"],
+"companies": ["Google"]
+},
+{
+"title": "Explain active-active and active-passive system architectures",
+"description": "Explain how different failover strategies affect system availability.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["reliability","distributed-systems"],
+"companies": ["Google"]
+},
+{
+"title": "Explain quorum-based consensus in distributed systems",
+"description": "Explain how quorum mechanisms help distributed systems maintain consistency.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["distributed-systems"],
+"companies": ["Google"]
+},
+{
+"title": "Explain the difference between durability and availability",
+"description": "Explain how systems balance durability and availability in distributed architectures.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["distributed-systems"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain disaster recovery strategies in backend systems",
+"description": "Explain how organizations prepare for catastrophic failures.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["reliability","backend-architecture"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain the concept of recovery time objective and recovery point objective",
+"description": "Explain how RTO and RPO guide disaster recovery planning.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["reliability","backend-architecture"],
+"companies": ["Netflix"]
+},
+{
+"title": "Explain data durability guarantees in distributed storage systems",
+"description": "Explain how distributed storage systems replicate data to prevent loss.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["distributed-systems","backend-architecture"],
+"companies": ["Amazon"]
+},
+{
+"title": "Explain architectural trade-offs when designing high-scale APIs",
+"description": "Explain trade-offs between consistency, latency, and system complexity.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["backend-architecture","scalability"],
+"companies": ["Amazon","Google"]
+},
+{
+"title": "Explain principles of designing resilient backend services",
+"description": "Explain design principles that help services remain reliable during partial failures.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["reliability","backend-architecture"],
+"companies": ["Netflix"]
+}
+  ]
+}

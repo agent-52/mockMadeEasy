@@ -1,0 +1,9 @@
+# Python
+venv/
+backend/tts-service/venv/
+
+# Node
+node_modules/
+
+# Env
+.env

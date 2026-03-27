@@ -1,0 +1,1589 @@
+{
+    "subject":"system_design",
+    "questions":[
+        {
+"title": "Design a URL shortener like Bitly",
+"description": "Design a service that converts long URLs into short links and redirects users when the short link is accessed. Discuss API design, database schema, handling collisions, scaling for billions of URLs, and caching strategies.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","scalability","database-design","caching"],
+"companies": ["Amazon","Google"]
+},
+{
+"title": "Design a pastebin service",
+"description": "Design a system where users can store and share text snippets using generated links. Discuss storage, expiration policies, scaling reads, and preventing abuse.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a distributed rate limiter",
+"description": "Design a rate limiting system that can limit requests per user across multiple servers in a distributed environment.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","distributed-systems"],
+"companies": ["Stripe","Amazon"]
+},
+{
+"title": "Design an API rate limiting system for a public API",
+"description": "Design a system that restricts how frequently users can call an API. Consider per-user limits, burst handling, and global enforcement.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["api-design","scalability"],
+"companies": ["Stripe"]
+},
+{
+"title": "Design a distributed cache system",
+"description": "Design a distributed caching layer similar to Redis or Memcached that can handle millions of requests per second.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["caching","distributed-systems"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a notification system",
+"description": "Design a system that sends notifications via email, SMS, and push notifications to millions of users.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","messaging"],
+"companies": ["Meta"]
+},
+{
+"title": "Design a log aggregation system",
+"description": "Design a system that collects logs from thousands of servers and allows querying and monitoring.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["distributed-systems","system-design"],
+"companies": ["Netflix"]
+},
+{
+"title": "Design a metrics monitoring system like Prometheus",
+"description": "Design a system that collects and stores metrics from services and allows real-time visualization and alerting.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","monitoring"],
+"companies": ["Google"]
+},
+{
+"title": "Design a task scheduling system",
+"description": "Design a system that allows scheduling background jobs to run at specific times or intervals.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","distributed-systems"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a distributed job queue",
+"description": "Design a queue system that distributes background tasks to multiple workers reliably.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","messaging"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a file upload service",
+"description": "Design a system that allows users to upload large files and share them via links.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","storage"],
+"companies": ["Dropbox"]
+},
+{
+"title": "Design a distributed key-value store",
+"description": "Design a system similar to DynamoDB that can store key-value pairs across multiple nodes.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["distributed-systems","database-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a content delivery network (CDN)",
+"description": "Design a global system that caches and delivers static assets from locations close to users.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["distributed-systems","caching"],
+"companies": ["Cloudflare"]
+},
+{
+"title": "Design a search autocomplete service",
+"description": "Design a system that provides real-time search suggestions as users type queries.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","search"],
+"companies": ["Google"]
+},
+{
+"title": "Design a recommendation system for an e-commerce site",
+"description": "Design a system that recommends products based on user behavior and purchase history.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","recommendation-systems"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a distributed locking system",
+"description": "Design a distributed lock that prevents multiple services from modifying the same resource simultaneously.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["distributed-systems"],
+"companies": ["Google"]
+},
+{
+"title": "Design a global chat application",
+"description": "Design a messaging platform where users can send messages in real time across multiple regions.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","messaging"],
+"companies": ["Meta"]
+},
+{
+"title": "Design a real-time collaborative editing system",
+"description": "Design a system similar to Google Docs that allows multiple users to edit a document simultaneously.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["distributed-systems","system-design"],
+"companies": ["Google"]
+},
+{
+"title": "Design a video streaming platform",
+"description": "Design a system similar to YouTube or Netflix that stores and streams videos to millions of users.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","scalability","storage"],
+"companies": ["Netflix"]
+},
+{
+"title": "Design a photo sharing service",
+"description": "Design a system similar to Instagram that allows users to upload photos and view feeds.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Meta"]
+},
+{
+"title": "Design a distributed ID generator",
+"description": "Design a system that generates globally unique IDs across multiple servers.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["distributed-systems"],
+"companies": ["Twitter"]
+},
+{
+"title": "Design a social media feed system",
+"description": "Design a system that generates personalized feeds for users following other users.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","scalability"],
+"companies": ["Meta"]
+},
+{
+"title": "Design a leaderboard system",
+"description": "Design a system that tracks and ranks players based on scores in real time.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","caching"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a real-time analytics system",
+"description": "Design a system that processes millions of events per second and provides analytics dashboards.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["distributed-systems","analytics"],
+"companies": ["Google"]
+},
+{
+"title": "Design a ride-sharing service like Uber",
+"description": "Design the backend system responsible for matching riders with drivers in real time.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","geospatial"],
+"companies": ["Uber"]
+},
+{
+"title": "Design a location-based service",
+"description": "Design a system that finds nearby restaurants or services based on user location.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","geospatial"],
+"companies": ["Google"]
+},
+{
+"title": "Design a distributed web crawler",
+"description": "Design a system that crawls billions of webpages efficiently.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["distributed-systems"],
+"companies": ["Google"]
+},
+{
+"title": "Design a news feed ranking system",
+"description": "Design the algorithm and system responsible for ranking posts in a social media feed.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","recommendation-systems"],
+"companies": ["Meta"]
+},
+{
+"title": "Design a payment processing system",
+"description": "Design a system that processes payments securely and reliably.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","security"],
+"companies": ["Stripe"]
+},
+{
+"title": "Design a fraud detection system",
+"description": "Design a system that detects suspicious financial transactions in real time.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","security"],
+"companies": ["Stripe"]
+},
+{
+"title": "Design a push notification delivery system",
+"description": "Design a system capable of delivering push notifications to millions of mobile devices.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["messaging","system-design"],
+"companies": ["Meta"]
+},
+{
+"title": "Design a distributed configuration management system",
+"description": "Design a system that stores and distributes configuration settings to thousands of services.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["distributed-systems"],
+"companies": ["Netflix"]
+},
+{
+"title": "Design a system to detect trending hashtags",
+"description": "Design a system that identifies trending topics in real time from social media streams.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["analytics","system-design"],
+"companies": ["Twitter"]
+},
+{
+"title": "Design a URL preview service",
+"description": "Design a system that generates preview metadata when users share links.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design"],
+"companies": ["Meta"]
+},
+{
+"title": "Design a distributed session store",
+"description": "Design a system to store user sessions for millions of concurrent users.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","distributed-systems"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a system that stores user activity logs",
+"description": "Design a scalable system that records and queries user activity events.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["analytics","system-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a real-time collaboration chat system",
+"description": "Design a chat system used inside a workplace collaboration platform.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","messaging"],
+"companies": ["Slack"]
+},
+{
+"title": "Design a distributed search engine",
+"description": "Design a system capable of indexing and searching billions of documents.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["distributed-systems","search"],
+"companies": ["Google"]
+},
+{
+"title": "Design a feature flag system",
+"description": "Design a system that enables or disables application features dynamically.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design"],
+"companies": ["Stripe"]
+},
+{
+"title": "Design a distributed event streaming platform",
+"description": "Design a system similar to Kafka that can handle high-throughput event streams.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["messaging","distributed-systems"],
+"companies": ["LinkedIn"]
+},
+{
+"title": "Design a simple URL shortener for a small application",
+"description": "Design a basic service that converts long URLs into short links. Assume the system handles only thousands of URLs per day. Discuss API endpoints, database schema, and redirection flow.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","api-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a basic user authentication system",
+"description": "Design a system that allows users to register, login, and logout. Discuss password storage, session handling, and API design.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","security"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a file upload service for profile pictures",
+"description": "Design a system that allows users to upload and retrieve profile images.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","storage"],
+"companies": ["Meta"]
+},
+{
+"title": "Design a simple comment system for a blog",
+"description": "Design a system where users can add comments under blog posts.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a basic search feature for a website",
+"description": "Design a search functionality that allows users to search blog posts by title.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","search"],
+"companies": ["Google"]
+},
+{
+"title": "Design a system that stores user preferences",
+"description": "Design a backend system that stores user preferences such as theme and language settings.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a basic notification system",
+"description": "Design a system that sends notifications to users when a new message arrives.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","messaging"],
+"companies": ["Meta"]
+},
+{
+"title": "Design a login session management system",
+"description": "Design a system that stores user sessions and keeps users logged in across requests.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","authentication"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a system for liking posts",
+"description": "Design a system that allows users to like and unlike posts.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Meta"]
+},
+{
+"title": "Design a system for following other users",
+"description": "Design a system that allows users to follow and unfollow other users.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Meta"]
+},
+{
+"title": "Design a simple activity feed",
+"description": "Design a system that shows recent activities of users someone follows.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Meta"]
+},
+{
+"title": "Design a basic rating system",
+"description": "Design a system that allows users to rate products using stars.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a system that counts page views",
+"description": "Design a backend service that counts how many times a page has been visited.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","analytics"],
+"companies": ["Google"]
+},
+{
+"title": "Design a simple API logging system",
+"description": "Design a system that records API requests for debugging and monitoring.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","monitoring"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a system that stores user uploaded documents",
+"description": "Design a service where users can upload and retrieve personal documents.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","storage"],
+"companies": ["Dropbox"]
+},
+{
+"title": "Design a system that tracks user login history",
+"description": "Design a backend system that records each login event for users.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","analytics"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a basic search autocomplete feature",
+"description": "Design a system that suggests search queries as users type.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","search"],
+"companies": ["Google"]
+},
+{
+"title": "Design a simple email sending service",
+"description": "Design a backend system that sends confirmation emails to users.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","messaging"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a system that stores product inventory",
+"description": "Design a service that tracks available stock for products.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a basic product review system",
+"description": "Design a system where users can submit reviews for products.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a basic bookmarking system",
+"description": "Design a system where users can bookmark items and retrieve them later.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a system that tracks video views",
+"description": "Design a backend that counts how many times a video has been watched.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","analytics"],
+"companies": ["YouTube"]
+},
+{
+"title": "Design a basic search history storage system",
+"description": "Design a backend system that stores recent searches performed by a user.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Google"]
+},
+{
+"title": "Design a basic leaderboard system",
+"description": "Design a system that ranks players based on scores.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a password reset system",
+"description": "Design a system that allows users to reset forgotten passwords securely.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","security"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a system that records user feedback",
+"description": "Design a backend that stores feedback submitted by users.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a basic tagging system",
+"description": "Design a system where users can add tags to content.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["StackOverflow"]
+},
+{
+"title": "Design a system that stores user notifications",
+"description": "Design a backend service that stores notifications before they are delivered.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","messaging"],
+"companies": ["Meta"]
+},
+{
+"title": "Design a simple messaging inbox",
+"description": "Design a system that stores messages sent between users.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","messaging"],
+"companies": ["Meta"]
+},
+{
+"title": "Design a simple user profile service",
+"description": "Design a backend system that stores and retrieves user profile data.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a system that records product clicks",
+"description": "Design a service that tracks when users click on products.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","analytics"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a basic FAQ search system",
+"description": "Design a backend that allows users to search frequently asked questions.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","search"],
+"companies": ["Google"]
+},
+{
+"title": "Design a system that saves drafts for blog posts",
+"description": "Design a backend where users can save unfinished blog drafts.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Medium"]
+},
+{
+"title": "Design a system that tracks user signups",
+"description": "Design a service that records user registration events.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","analytics"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a simple poll voting system",
+"description": "Design a backend that allows users to vote in polls.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Twitter"]
+},
+{
+"title": "Design a system that stores recently viewed items",
+"description": "Design a system that remembers items recently viewed by users.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","caching"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a basic chat room system",
+"description": "Design a system where users can join chat rooms and send messages.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","messaging"],
+"companies": ["Discord"]
+},
+{
+"title": "Design a system that stores contact lists",
+"description": "Design a backend system where users can store and retrieve contacts.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Google"]
+},
+{
+"title": "Design a system that allows users to upload avatars",
+"description": "Design a service that handles avatar image uploads and retrieval.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","storage"],
+"companies": ["Meta"]
+},
+{
+"title": "Design Twitter",
+"description": "Design a social media platform similar to Twitter where users can post tweets, follow other users, and view a timeline. Discuss feed generation, storage of tweets, fan-out strategies, and scaling reads.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","scalability","database-design"],
+"companies": ["Meta","Amazon"]
+},
+{
+"title": "Design Instagram feed",
+"description": "Design a system that generates personalized feeds for users based on the people they follow. Discuss push vs pull feed models and caching strategies.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","scalability","caching"],
+"companies": ["Meta"]
+},
+{
+"title": "Design Google Drive",
+"description": "Design a distributed file storage system similar to Google Drive that allows users to upload, share, and synchronize files across devices.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","distributed-systems","storage"],
+"companies": ["Google"]
+},
+{
+"title": "Design Dropbox",
+"description": "Design a file synchronization service that keeps files consistent across multiple devices.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","distributed-systems","storage"],
+"companies": ["Dropbox"]
+},
+{
+"title": "Design YouTube video streaming",
+"description": "Design a system that allows users to upload videos and stream them globally. Discuss storage, transcoding, CDN usage, and caching.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","scalability","storage"],
+"companies": ["Google"]
+},
+{
+"title": "Design Netflix video delivery",
+"description": "Design a system capable of streaming videos to millions of users simultaneously with minimal latency.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","cdn","scalability"],
+"companies": ["Netflix"]
+},
+{
+"title": "Design WhatsApp messaging system",
+"description": "Design a real-time messaging platform that allows users to send messages instantly across the globe.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","messaging","distributed-systems"],
+"companies": ["Meta"]
+},
+{
+"title": "Design Slack messaging platform",
+"description": "Design a workplace messaging system that supports channels, direct messages, and message history.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","messaging"],
+"companies": ["Slack"]
+},
+{
+"title": "Design a distributed search engine",
+"description": "Design a search engine capable of indexing and retrieving billions of documents.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","search","distributed-systems"],
+"companies": ["Google"]
+},
+{
+"title": "Design Google Maps nearby search",
+"description": "Design a service that finds nearby businesses or restaurants based on a user's location.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","geospatial"],
+"companies": ["Google"]
+},
+{
+"title": "Design a distributed logging system",
+"description": "Design a system that collects logs from thousands of servers and allows centralized querying.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","monitoring"],
+"companies": ["Netflix"]
+},
+{
+"title": "Design a global leaderboard system",
+"description": "Design a system that ranks millions of users based on scores in real time.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","caching"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a distributed caching service",
+"description": "Design a distributed cache similar to Redis that can scale horizontally.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","caching","distributed-systems"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a distributed rate limiting service",
+"description": "Design a service that enforces API rate limits across multiple servers.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","distributed-systems"],
+"companies": ["Stripe"]
+},
+{
+"title": "Design a ride matching service like Uber",
+"description": "Design the system responsible for matching drivers and riders in real time.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","geospatial"],
+"companies": ["Uber"]
+},
+{
+"title": "Design a recommendation system for Netflix",
+"description": "Design a system that recommends movies based on user preferences and viewing history.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","recommendation-systems"],
+"companies": ["Netflix"]
+},
+{
+"title": "Design a fraud detection system",
+"description": "Design a system that detects suspicious financial transactions in real time.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","security"],
+"companies": ["Stripe"]
+},
+{
+"title": "Design a distributed job processing system",
+"description": "Design a system that distributes background jobs to worker machines reliably.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","messaging"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a distributed task scheduler",
+"description": "Design a system that schedules jobs to run across multiple servers.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","distributed-systems"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a system to detect trending hashtags",
+"description": "Design a system that detects trending topics on a social media platform.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","analytics"],
+"companies": ["Twitter"]
+},
+{
+"title": "Design a distributed metrics monitoring system",
+"description": "Design a system that collects metrics from servers and provides dashboards.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","monitoring"],
+"companies": ["Google"]
+},
+{
+"title": "Design a real-time analytics pipeline",
+"description": "Design a system that processes millions of events per second and generates analytics dashboards.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","analytics"],
+"companies": ["Google"]
+},
+{
+"title": "Design a notification delivery system",
+"description": "Design a system capable of sending push notifications to millions of users.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","messaging"],
+"companies": ["Meta"]
+},
+{
+"title": "Design a distributed session store",
+"description": "Design a system that stores user sessions across multiple servers.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","distributed-systems"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a distributed ID generation system",
+"description": "Design a system that generates globally unique IDs across servers.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","distributed-systems"],
+"companies": ["Twitter"]
+},
+{
+"title": "Design a feature flag service",
+"description": "Design a system that allows enabling or disabling features dynamically.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design"],
+"companies": ["Stripe"]
+},
+{
+"title": "Design a collaborative document editing system",
+"description": "Design a system similar to Google Docs where multiple users can edit a document simultaneously.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","distributed-systems"],
+"companies": ["Google"]
+},
+{
+"title": "Design a distributed event streaming system",
+"description": "Design a system similar to Kafka that handles high-throughput event streams.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","messaging"],
+"companies": ["LinkedIn"]
+},
+{
+"title": "Design a search autocomplete system at scale",
+"description": "Design a system that provides suggestions for search queries in real time for millions of users.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","search"],
+"companies": ["Google"]
+},
+{
+"title": "Design a system for storing IoT sensor data",
+"description": "Design a system that collects and stores millions of sensor readings per second.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","analytics"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a multi-region database architecture",
+"description": "Design a system that keeps databases synchronized across multiple geographic regions.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","distributed-systems"],
+"companies": ["Google"]
+},
+{
+"title": "Design a cache invalidation system",
+"description": "Design a system that ensures caches remain consistent with the underlying database.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","caching"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a cache that prevents cache stampede",
+"description": "Design a system that prevents many servers from querying the database simultaneously when a cache entry expires.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","caching"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a distributed locking service",
+"description": "Design a distributed lock system used by multiple services to coordinate operations.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","distributed-systems"],
+"companies": ["Google"]
+},
+{
+"title": "Design a system for storing large analytics events",
+"description": "Design a service that records billions of user events per day.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","analytics"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a system for detecting abusive content",
+"description": "Design a system that automatically detects and flags inappropriate content.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","moderation"],
+"companies": ["Meta"]
+},
+{
+"title": "Design a system that handles flash sales",
+"description": "Design an e-commerce backend that handles sudden spikes in traffic during flash sales.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","scalability"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a global configuration service",
+"description": "Design a service that distributes configuration settings to thousands of microservices.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","distributed-systems"],
+"companies": ["Netflix"]
+},
+{
+"title": "Design a system for A/B testing",
+"description": "Design a platform that allows running experiments on different user groups.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","analytics"],
+"companies": ["Google"]
+},
+{
+"title": "Design a system that tracks real-time stock prices",
+"description": "Design a system that streams stock price updates to millions of users in real time.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","real-time-systems"],
+"companies": ["Bloomberg"]
+},
+{
+"title": "Design a basic URL preview generator",
+"description": "Design a service that fetches metadata such as title, description, and thumbnail when a user shares a URL.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","api-design"],
+"companies": ["Meta"]
+},
+{
+"title": "Design a system that tracks user login attempts",
+"description": "Design a backend service that records login attempts and allows administrators to review them.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","security"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a simple bookmark manager",
+"description": "Design a backend service that allows users to save, retrieve, and delete bookmarked links.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Google"]
+},
+{
+"title": "Design a system that stores contact form submissions",
+"description": "Design a service that records messages submitted through a website contact form.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a system for uploading profile pictures",
+"description": "Design a backend that allows users to upload, store, and retrieve profile images.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","storage"],
+"companies": ["Meta"]
+},
+{
+"title": "Design a simple announcement system",
+"description": "Design a service where administrators can post announcements visible to users.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a system that tracks user last login time",
+"description": "Design a service that records when a user last logged into the application.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","analytics"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a simple feedback submission service",
+"description": "Design a backend that collects feedback submitted by users.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a system that stores recently viewed products",
+"description": "Design a system that keeps track of items a user recently viewed.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","caching"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a simple blog publishing system",
+"description": "Design a backend that allows users to create, edit, and publish blog posts.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Medium"]
+},
+{
+"title": "Design a system that records page visits",
+"description": "Design a service that counts how many times a page has been viewed.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","analytics"],
+"companies": ["Google"]
+},
+{
+"title": "Design a basic messaging inbox",
+"description": "Design a backend system that stores messages sent between users.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","messaging"],
+"companies": ["Meta"]
+},
+{
+"title": "Design a simple notification storage service",
+"description": "Design a system that stores notifications for users before they are delivered.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","messaging"],
+"companies": ["Meta"]
+},
+{
+"title": "Design a system that stores user avatars",
+"description": "Design a backend service that manages user avatar images.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","storage"],
+"companies": ["Meta"]
+},
+{
+"title": "Design a system that records product ratings",
+"description": "Design a service that allows users to rate products using stars.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a simple FAQ management system",
+"description": "Design a backend system where administrators can add and edit frequently asked questions.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Google"]
+},
+{
+"title": "Design a system that tracks user search history",
+"description": "Design a service that stores recent search queries performed by a user.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Google"]
+},
+{
+"title": "Design a basic image gallery service",
+"description": "Design a backend where users can upload and view images.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","storage"],
+"companies": ["Meta"]
+},
+{
+"title": "Design a simple to-do list backend",
+"description": "Design a system that allows users to create, update, and delete tasks.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a system that records user device information",
+"description": "Design a backend service that stores devices used by users to access the application.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","security"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a system that stores product categories",
+"description": "Design a backend that organizes products into hierarchical categories.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a system that records user subscriptions",
+"description": "Design a service that tracks which users subscribe to certain services or plans.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Stripe"]
+},
+{
+"title": "Design a system that tracks article likes",
+"description": "Design a backend service that allows users to like and unlike articles.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Medium"]
+},
+{
+"title": "Design a basic event RSVP system",
+"description": "Design a system that allows users to RSVP to events.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Facebook"]
+},
+{
+"title": "Design a system that stores user uploaded resumes",
+"description": "Design a backend that allows users to upload and retrieve resumes.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","storage"],
+"companies": ["LinkedIn"]
+},
+{
+"title": "Design a system that stores notification preferences",
+"description": "Design a backend that allows users to choose which notifications they want to receive.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Meta"]
+},
+{
+"title": "Design a simple tagging system for posts",
+"description": "Design a system that allows users to tag posts with keywords.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["StackOverflow"]
+},
+{
+"title": "Design a system that stores API usage statistics",
+"description": "Design a service that records API usage metrics for monitoring.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","analytics"],
+"companies": ["Stripe"]
+},
+{
+"title": "Design a system that stores recently searched items",
+"description": "Design a backend that stores recent search queries for users.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","caching"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a system that records user login locations",
+"description": "Design a backend that tracks from which location users logged in.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","security"],
+"companies": ["Google"]
+},
+{
+"title": "Design a simple comment moderation system",
+"description": "Design a backend that allows moderators to review and remove comments.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","moderation"],
+"companies": ["Meta"]
+},
+{
+"title": "Design a simple poll system",
+"description": "Design a backend where users can vote in polls.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Twitter"]
+},
+{
+"title": "Design a system that stores application error reports",
+"description": "Design a backend that collects error reports from client applications.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","monitoring"],
+"companies": ["Google"]
+},
+{
+"title": "Design a system that stores product wishlists",
+"description": "Design a backend where users can save products they want to purchase later.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a system that stores recently played songs",
+"description": "Design a backend that records recently played songs for a user.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Spotify"]
+},
+{
+"title": "Design a system that stores user profile settings",
+"description": "Design a backend service that manages editable user profile settings.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a simple document sharing service",
+"description": "Design a backend system that allows users to upload and share documents.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","storage"],
+"companies": ["Google"]
+},
+{
+"title": "Design a system that stores product reviews",
+"description": "Design a backend that allows users to submit and view reviews for products.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a system that records user activity events",
+"description": "Design a service that stores events such as clicks, logins, and purchases.",
+"difficulty": "easy",
+"type": "theory",
+"topics": ["system-design","analytics"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design Google Docs collaborative editing",
+"description": "Design a system that allows multiple users to edit the same document in real time. Discuss conflict resolution, operational transforms, and latency considerations.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","real-time-systems","distributed-systems"],
+"companies": ["Google"]
+},
+{
+"title": "Design TikTok video feed",
+"description": "Design a system that delivers short-form video feeds personalized for each user.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","recommendation-systems","scalability"],
+"companies": ["ByteDance"]
+},
+{
+"title": "Design Airbnb search service",
+"description": "Design a service that allows users to search for accommodations based on filters like location, price, and dates.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","search","database-design"],
+"companies": ["Airbnb"]
+},
+{
+"title": "Design Google Calendar scheduling system",
+"description": "Design a system that schedules meetings between multiple participants and detects conflicts.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","calendar-systems"],
+"companies": ["Google"]
+},
+{
+"title": "Design a distributed cron job scheduler",
+"description": "Design a system that schedules and executes jobs reliably across multiple servers.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","distributed-systems"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a global CDN routing system",
+"description": "Design a system that routes user requests to the nearest CDN edge server.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","cdn","distributed-systems"],
+"companies": ["Cloudflare"]
+},
+{
+"title": "Design a distributed database backup system",
+"description": "Design a system that performs periodic backups of large databases across regions.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","database-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a multi-region active-active database",
+"description": "Design a database architecture that allows writes in multiple geographic regions.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","distributed-systems","database-design"],
+"companies": ["Google"]
+},
+{
+"title": "Design a distributed feature rollout system",
+"description": "Design a system that gradually rolls out new features to subsets of users.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","feature-flags"],
+"companies": ["Stripe"]
+},
+{
+"title": "Design a global image hosting service",
+"description": "Design a platform that stores and serves billions of images worldwide.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","storage","cdn"],
+"companies": ["Pinterest"]
+},
+{
+"title": "Design a distributed graph database",
+"description": "Design a system capable of storing and querying large graph datasets.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","distributed-systems","database-design"],
+"companies": ["Google"]
+},
+{
+"title": "Design a real-time multiplayer game server",
+"description": "Design a backend architecture that supports thousands of concurrent players in real time.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","real-time-systems"],
+"companies": ["Epic Games"]
+},
+{
+"title": "Design a distributed log processing pipeline",
+"description": "Design a pipeline that processes logs in real time for monitoring and analytics.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","analytics"],
+"companies": ["Netflix"]
+},
+{
+"title": "Design a distributed configuration management service",
+"description": "Design a system that stores and distributes configuration data to thousands of services.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","distributed-systems"],
+"companies": ["Netflix"]
+},
+{
+"title": "Design a system for detecting bot traffic",
+"description": "Design a service that identifies automated traffic and prevents abuse.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","security"],
+"companies": ["Cloudflare"]
+},
+{
+"title": "Design a payment settlement system",
+"description": "Design a system that processes financial settlements between multiple parties.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","payments"],
+"companies": ["Stripe"]
+},
+{
+"title": "Design a distributed notification queue",
+"description": "Design a system that queues and delivers notifications reliably.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","messaging"],
+"companies": ["Meta"]
+},
+{
+"title": "Design a ride pricing system",
+"description": "Design a service that calculates dynamic pricing for rides based on demand and supply.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","analytics"],
+"companies": ["Uber"]
+},
+{
+"title": "Design a system that prevents duplicate payments",
+"description": "Design a backend system that ensures payments are processed exactly once.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","payments"],
+"companies": ["Stripe"]
+},
+{
+"title": "Design a global API gateway",
+"description": "Design an API gateway that handles authentication, routing, and rate limiting for services.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","api-design"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a system for detecting spam emails",
+"description": "Design a service that filters spam emails from legitimate ones.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","security"],
+"companies": ["Google"]
+},
+{
+"title": "Design a distributed data warehouse",
+"description": "Design a system capable of storing petabytes of analytical data.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","analytics"],
+"companies": ["Snowflake"]
+},
+{
+"title": "Design a system that handles burst traffic spikes",
+"description": "Design an architecture that can handle sudden traffic spikes without downtime.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","scalability"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a distributed search index update system",
+"description": "Design a system that updates search indexes when new content is added.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","search"],
+"companies": ["Google"]
+},
+{
+"title": "Design a system that detects trending videos",
+"description": "Design a service that identifies trending videos based on engagement metrics.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","analytics"],
+"companies": ["YouTube"]
+},
+{
+"title": "Design a distributed log storage system",
+"description": "Design a system that stores logs from millions of servers for long-term analysis.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","monitoring"],
+"companies": ["Netflix"]
+},
+{
+"title": "Design a system that detects suspicious login activity",
+"description": "Design a system that detects unusual login patterns and triggers security alerts.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","security"],
+"companies": ["Google"]
+},
+{
+"title": "Design a global chat message delivery system",
+"description": "Design a system that guarantees message delivery across geographic regions.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","messaging","distributed-systems"],
+"companies": ["Meta"]
+},
+{
+"title": "Design a distributed search ranking system",
+"description": "Design a system that ranks search results based on relevance and popularity.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","search"],
+"companies": ["Google"]
+},
+{
+"title": "Design a distributed cache eviction strategy",
+"description": "Design a system that manages cache eviction across distributed nodes.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","caching"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a service for managing millions of user sessions",
+"description": "Design a system that stores and retrieves active user sessions across servers.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","distributed-systems"],
+"companies": ["Amazon"]
+},
+{
+"title": "Design a large-scale recommendation engine",
+"description": "Design a system that recommends products or content based on user behavior.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","recommendation-systems"],
+"companies": ["Netflix"]
+},
+{
+"title": "Design a system that processes billions of daily events",
+"description": "Design an architecture that ingests and processes billions of events per day.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","analytics"],
+"companies": ["Google"]
+},
+{
+"title": "Design a distributed feature experimentation system",
+"description": "Design a system that runs experiments on different user segments.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","analytics"],
+"companies": ["Google"]
+},
+{
+"title": "Design a service for syncing user settings across devices",
+"description": "Design a backend system that synchronizes user settings across multiple devices.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","distributed-systems"],
+"companies": ["Apple"]
+},
+{
+"title": "Design a system that handles millions of webhook events",
+"description": "Design a backend that reliably processes webhook callbacks from external services.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","messaging"],
+"companies": ["Stripe"]
+},
+{
+"title": "Design a global search suggestion ranking system",
+"description": "Design a system that ranks autocomplete suggestions based on popularity and recency.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","search"],
+"companies": ["Google"]
+},
+{
+"title": "Design a distributed metrics aggregation system",
+"description": "Design a system that aggregates metrics across thousands of microservices.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","monitoring"],
+"companies": ["Netflix"]
+},
+{
+"title": "Design a real-time bidding system for ads",
+"description": "Design a system that handles auctions for displaying advertisements in real time.",
+"difficulty": "hard",
+"type": "theory",
+"topics": ["system-design","ads","real-time-systems"],
+"companies": ["Google"]
+},
+{
+"title": "Design a distributed content moderation pipeline",
+"description": "Design a system that processes and moderates uploaded content at scale.",
+"difficulty": "medium",
+"type": "theory",
+"topics": ["system-design","moderation"],
+"companies": ["Meta"]
+}
+    ]
+}

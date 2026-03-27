@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "StatsCard" ADD COLUMN     "accuracy" DOUBLE PRECISION NOT NULL DEFAULT 0;

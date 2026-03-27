@@ -1,0 +1,21 @@
+
+
+.sidebar {
+  min-width: 260px;
+  width: fit-content;
+}
+
+
+.progress-bar {
+  height: 6px;
+  background: #1f2937;
+  border-radius: 4px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #3ecf8e;
+  border-radius: 4px;
+}
+
+

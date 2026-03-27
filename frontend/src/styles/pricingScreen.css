@@ -1,0 +1,103 @@
+.pricing-page {
+  min-height: 100vh;
+}
+
+.pricing-hero{
+    padding-top: 86px;
+    padding-bottom: 32px;
+}
+
+
+.pricing-subtitle {
+  opacity: 0.7;
+}
+
+.pricing-card {
+  width: 320px;
+  position: relative;
+}
+
+.pricing-card-highlight {
+  border: 1px solid #34d399;
+  box-shadow: 0 0 20px rgba(52, 211, 153, 0.2);
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #34d399;
+  color: black;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.pricing-plan-title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.pricing-price {
+  font-size: 32px;
+  margin: 12px 0;
+}
+
+.pricing-duration {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+
+.pricing-btn-primary {
+  background: #34d399;
+  color: black;
+  border: none;
+  border-radius: 6px;
+}
+
+.pricing-feature-list {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+
+.pricing-table-container {
+  margin-top: 60px;
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.pricing-table th,
+.pricing-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border-muted);
+  text-align: center;
+}
+
+.pricing-table th:first-child,
+.pricing-table td:first-child {
+  text-align: left;
+}
+
+
+.faq-item {
+  padding: 16px 0;
+  cursor: pointer;
+}
+
+.faq-question {
+  font-weight: 500;
+}
+
+.faq-answer {
+  margin-top: 8px;
+  opacity: 0.7;
+}

@@ -1,0 +1,4 @@
+{
+    "git.ignoreLimitWarning": true,
+    "cmake.sourceDirectory": "C:/repo/mockMadeEasy/backend/tts-service/espeak-ng-1.52.0"
+}

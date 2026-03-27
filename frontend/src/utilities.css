@@ -1,0 +1,303 @@
+/* =========================
+   FLEX
+========================= */
+.flex {
+  display: flex;
+}
+.flexWrap{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flexC {
+  display: flex;
+  flex-direction: column;
+}
+
+.reverse{
+  flex-direction: row-reverse;
+}
+
+/* =========================
+   ALIGNMENT
+========================= */
+.alignC {
+  align-items: center;
+}
+
+.alignL {
+  align-items: flex-start;
+}
+
+.alignR {
+  align-items: flex-end;
+}
+
+.justifyC {
+  justify-content: center;
+}
+
+.justifyB {
+  justify-content: space-between;
+}
+
+.justifyE {
+  justify-content: flex-end;
+}
+
+/* =========================
+   FONT SIZES
+========================= */
+
+/*hero typography */
+.fHero {
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+}
+
+/* Large / Page Headings */
+.fXL {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+/* Section Headings */
+.fL {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+/* Sub-headings */
+.fM {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Body text (DEFAULT) */
+.fS {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Small / Meta */
+.fXS {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* =========================
+   FONT WEIGHTS
+========================= */
+.w400 { font-weight: 400; }
+.w500 { font-weight: 500; }
+.w600 { font-weight: 600; }
+
+
+/* =========================
+   LINE HEIGHT
+========================= */
+.lhTight {
+  line-height: 1.3;
+}
+
+.lhNormal {
+  line-height: 1.6;
+}
+
+.textPrimary {
+  color: var(--text-primary);
+}
+
+.textSecondary {
+  color: var(--text-secondary);
+}
+
+.textTertiary {
+  color: var(--text-tertiary);
+}
+
+
+/**hero **/
+
+.hero {
+  position: relative;
+  /* min-height: 100vh; */
+  background-color: transparent;
+    
+  overflow: hidden;
+}
+
+
+
+
+.hero-glow {
+  position: absolute;
+  width: 480px;
+  height: 480px;
+  z-index: -10000;
+  background: radial-gradient(
+    circle,
+    rgba(34, 197, 94, 0.35),
+    transparent 70%
+  );
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(80px);
+  animation: glowFloat 12s ease-in-out infinite;
+}
+
+@keyframes glowFloat {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -16px); }
+}
+
+
+
+
+
+/* =========================
+   GAP (8px scale)
+========================= */
+.gap1 { gap: 8px; }
+.gap2 { gap: 12px; }
+.gap3 { gap: 16px; }
+.gap4 { gap: 24px; }
+.gap5 { gap: 32px; }
+
+
+/* =========================
+   PADDING
+========================= */
+.pad0{ padding: 6px ;}
+.pad1 { padding: 8px; }
+.pad2 { padding: 12px; }
+.pad3 { padding: 16px; }
+.pad4 { padding: 24px; }
+.pad5 { padding: 32px; }
+
+.padX1{padding-inline: 6px;}
+.padX2 { padding-left: 12px; padding-right: 12px; }
+.padX3 { padding-left: 16px; padding-right: 16px; }
+.padX4 { padding-left: 24px; padding-right: 24px; }
+
+.padY0{padding-block: 2px;}
+.padY1 {padding-top: 6px; padding-bottom: 6px;}
+.padY2 { padding-top: 12px; padding-bottom: 12px; }
+.padY3 { padding-top: 16px; padding-bottom: 16px; }
+.padY4 { padding-top: 24px; padding-bottom: 24px; }
+.padY5 { padding-top: 32px; padding-bottom: 32px; }
+
+.padYB3{
+  padding-bottom: 16px;
+}
+.wFull {
+  width: 100%;
+}
+.fitW{
+  width: fit-content;
+}
+.maxW {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.textCenter {
+  text-align: center;
+}
+
+.textMuted {
+  color: var(--text-secondary);
+}
+
+.textSubtle {
+  color: var(--text-tertiary);
+}
+
+.noWrap{
+  white-space: nowrap;
+}
+
+.fullWidth{
+  width: 100%;
+}
+
+.decorated{
+  text-decoration: underline;
+}
+.hoverEffect{
+
+}
+.hoverEffect:hover{
+  color: var(--accent-hover);
+}
+.pointer{
+  cursor: pointer;
+}
+
+.identityImgContainer{
+  overflow: hidden;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.identityImgContainer img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+}
+.maxW750{
+  max-width: 750px;
+}
+
+/* custom buttons */
+.theory{
+  color: #4b96ed;
+  border: 1px solid #173157;
+  background-color: #121e2e;
+}
+.mixed{
+  color: #01c3e0;
+  border: 1px solid #0b414d;
+  background-color: #0e242a;
+}
+.coding{
+  color: #b371ec;
+  border: 1px solid #3c2157;
+  background-color: #20182e;
+}
+.easy{
+  color: #05df72;
+  border: 1px solid #0b4526;
+  background-color: #0e251c;
+}
+.medium{
+  color: #fdc700;
+  border: 1px solid #4e3f10;
+  background-color: #262314;
+}
+.hard{
+  color: #ff6467;
+  border: 1px solid #52191f;
+  background-color: #28151a;
+}
+
+.colorE{
+  color: #05df72;
+}
+.colorM{
+  color: #fdc700;
+}
+.colorH{
+  color: #ff6467;
+}
