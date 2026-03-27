@@ -16,7 +16,7 @@ ttsRouter.post("/", async(req, res) => {
     }
 
     try {
-        const audioUrl = await getOrCreateAudio(text, voiceId)
+        const audioUrl = await getOrCreateAudio(text)
         return res.status(200).json({
             audioUrl
         })

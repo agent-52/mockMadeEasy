@@ -9,7 +9,11 @@ async function createCodeExecutionPlaceholder(tx:Prisma.TransactionClient, stats
         create:{
             statsCardDetailId,
             passed:false,
-            error:"Not evaluated yet"
+            error:"Not evaluated yet",
+
+            passedCount: 0,
+            failedCount: 0,
+            totalCount: 0
         }
     })
     
