@@ -15,8 +15,8 @@ const Header = () =>{
                 <div className="hDiv w400">Blog</div>
             </div>
             <div className="flex gap2">
-                <Link to="/auth/login"><Button className="btn-secondary" paddingX={10} paddingY={5} text="Login" onClickFn={() =>{}}/></Link>
-                <Link to="/auth/signup"><Button className="btn-primary" paddingX={10} paddingY={5} text="Signup" onClickFn={() =>{}}/></Link>
+                <Link to="/auth/login"><Button className="btn-secondary" paddingX={10} paddingY={5} text="Login" onClickFn={() =>{}} disabled={false}/></Link>
+                <Link to="/auth/signup"><Button className="btn-primary" paddingX={10} paddingY={5} text="Signup" onClickFn={() =>{}} disabled={false}/></Link>
             </div>
         </header>
     )
