@@ -4,9 +4,6 @@ import cookieParser from "cookie-parser"
 import http from "http"
 import "./websocket/transcript/speechServer"
 import { setupWebSocket } from "./websocket/transcript/speechServer"
-import { evaluateQuestionServiec_ai } from "./services/ai/evaluateQuestionService"
-import { Difficulty } from "@prisma/client"
-import { evaluateInterviewService_ai} from './services/ai/evaluateInterviewService_ai';
 import cors from 'cors';
 
 const app = express()
@@ -14,7 +11,10 @@ app.use(cookieParser())
 app.use(express.json())
 app.use(cors({
     credentials: true,
-    origin: "http://localhost:5173"
+    origin: [
+        "http://localhost:5173",
+        "https://mock-made-easy.vercel.app/"
+    ]
 }))
 app.use("/api", mainRouter)
 
