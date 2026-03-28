@@ -56,6 +56,17 @@ function getBucketName(){
     }
     return key
 }
+
+function getDeploymentStatus(){
+    const key = process.env.DEVELOPMENT_STATUS
+    if(!key){
+        throw new Error("DEPLOYMENT_STATUS is not defined")
+    }
+
+    return key
+}
+
+export const DEPLOYMENT_STATUS = getDeploymentStatus()
 export const DEEPGRAM_KEY = getDeepgramKey()
 export const JWT_SECRET = getJwtSecret()
 export const GROQ_API_KEY = getGroqKey()

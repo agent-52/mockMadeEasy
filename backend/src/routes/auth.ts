@@ -5,7 +5,7 @@ import bcrypt from "bcrypt";
 import cookieParser from "cookie-parser";
 import jwt from "jsonwebtoken";
 import cors from "cors";
-import { JWT_SECRET } from '../config/env';
+import { DEPLOYMENT_STATUS, JWT_SECRET } from '../config/env';
 import crypto from "crypto"
 import { deleteToken, rotateToken, storeToken, verifyToken } from '../db/refreshTokenQueries';
 import { prisma } from '../db/db';
@@ -82,13 +82,13 @@ authRouter.post("/login", verifyInput, async(req, res) =>{
 
         res.cookie("token", token, {
             httpOnly:true,
-            secure:process.env.NODE_ENV === "production",
-            sameSite: "lax"
+            secure: DEPLOYMENT_STATUS == "production"?true:false,
+            sameSite: "none"
         })
         res.cookie("refreshToken", refreshToken, {
             httpOnly: true,
-            secure: process.env.NODE_ENV === "production",
-            sameSite: "lax"
+            secure: DEPLOYMENT_STATUS == "production"?true:false,
+            sameSite: "none"
         })
         return res.status(200).json({
             message: "user successfuly signed in"
@@ -159,13 +159,13 @@ authRouter.get("/refresh", async(req, res) =>{
 
     res.cookie("token", txResult.accessToken, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
-        sameSite: "lax"
+        secure: DEPLOYMENT_STATUS == "production"?true:false,
+        sameSite: "none"
     })
     res.cookie("refreshToken", txResult.newRefreshToken, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
-        sameSite: "lax"
+        secure: DEPLOYMENT_STATUS == "production"?true:false,
+        sameSite: "none"
     })
 
     return res.status(200).json({
@@ -198,8 +198,8 @@ authRouter.post('/logout', async(req, res) =>{
        })
        res.clearCookie("refreshToken",{
         httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
-        sameSite: "lax"
+        secure: DEPLOYMENT_STATUS == "production"?true:false,
+        sameSite: "none"
     })
        return res.status(200).json({
         message:"logged out successfuly"
