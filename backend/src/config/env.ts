@@ -58,7 +58,7 @@ function getBucketName(){
 }
 
 function getDeploymentStatus(){
-    const key = process.env.DEVELOPMENT_STATUS
+    const key = process.env.DEPLOYMENT_STATUS
     if(!key){
         throw new Error("DEPLOYMENT_STATUS is not defined")
     }
