@@ -7,15 +7,16 @@ import { setupWebSocket } from "./websocket/transcript/speechServer"
 import cors from 'cors';
 
 const app = express()
-app.use(cookieParser())
-app.use(express.json())
 app.use(cors({
     credentials: true,
     origin: [
         "http://localhost:5173",
-        "https://mock-made-easy.vercel.app/"
+        "https://mock-made-easy.vercel.app"
     ]
 }))
+app.options("*", cors());
+app.use(express.json())
+app.use(cookieParser())
 app.use("/api", mainRouter)
 
 const server = http.createServer(app)
