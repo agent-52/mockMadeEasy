@@ -14,7 +14,7 @@ app.use(cors({
         "https://mock-made-easy.vercel.app"
     ]
 }))
-app.options("/*", cors());
+
 app.use(express.json())
 app.use(cookieParser())
 app.use("/api", mainRouter)
