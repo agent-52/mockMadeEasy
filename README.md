@@ -72,6 +72,10 @@ npm run dev
 - Real-time follow-up questions
 - Self-hosted Whisper integration
 
+## ⚖️ Tradeoffs
+
+- Used external STT (Deepgram) for MVP instead of Whisper due to latency constraints
+
 ## 👤 Author
 
 Abhay Bhadauriya  
