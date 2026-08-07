@@ -4,9 +4,9 @@ import { createBrowserRouter, RouterProvider } from "react-router";
 import routes from "./routes";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 const router = createBrowserRouter(routes);
+import "./App.css";
 
-
-const queryClient = new QueryClient()
+const queryClient = new QueryClient();
 const rootElement = document.getElementById("root");
 if (rootElement) {
   createRoot(rootElement).render(
@@ -14,6 +14,6 @@ if (rootElement) {
       <QueryClientProvider client={queryClient}>
         <RouterProvider router={router} />
       </QueryClientProvider>
-    </StrictMode>
+    </StrictMode>,
   );
 }
