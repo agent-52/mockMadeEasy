@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-
+import { Link } from "react-router";
 const NAV_LINKS = [
   { label: "Features", href: "#features" },
   { label: "How It Works", href: "#how-it-works" },
@@ -61,8 +61,12 @@ export default function Navbar() {
 
         {/* Right actions */}
         <div className="navbar-actions">
-          <button className="btn-nav-login">Login</button>
-          <button className="btn-nav-start">Get Started</button>
+          <Link to="/auth">
+            <button className="btn-nav-login">Login</button>
+          </Link>
+          <Link to="/auth">
+            <button className="btn-nav-start">Get Started</button>
+          </Link>
 
           {/* Hamburger — visible on mobile via CSS media query */}
           <button
@@ -118,8 +122,12 @@ export default function Navbar() {
             ))}
           </div>
           <div className="navbar-mobile-ctas">
-            <button className="btn-nav-login">Login</button>
-            <button className="btn-nav-start">Get Started</button>
+            <Link to="/auth">
+              <button className="btn-nav-login">Login</button>
+            </Link>
+            <Link to="/auth">
+              <button className="btn-nav-start">Get Started</button>
+            </Link>
           </div>
         </div>
       )}
