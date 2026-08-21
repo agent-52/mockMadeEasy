@@ -9,6 +9,8 @@ import { DEPLOYMENT_STATUS, JWT_SECRET } from '../config/env';
 import crypto from "crypto"
 import { deleteToken, rotateToken, storeToken, verifyToken } from '../db/refreshTokenQueries';
 import { prisma } from '../db/db';
+import { googleCallback, googleLogin } from './oAuth';
+import { auth } from '../middlewares/authMiddlewar';
 
 const authRouter = express.Router();
 
@@ -56,11 +58,16 @@ authRouter.post("/signup", verifyInput, async (req, res) =>{
 authRouter.post("/login", verifyInput, async(req, res) =>{
     const {email, password} = req.body;
     const userPresent = await checkUserPresent(email);
-    if(!userPresent){
+    if(!userPresent ){
         return res.status(401).json({
             message:"email not registered please signup first"
         })
-    }else{
+    }else if(!userPresent.password){
+        return res.status(401).json({
+            message:"password not valid please enter the correct password "
+        })
+    }
+    else{
         const isPasswordMatching = await bcrypt.compare(password, userPresent.password)
         if(!isPasswordMatching){
             return res.status(401).json({
@@ -209,4 +216,25 @@ authRouter.post('/logout', async(req, res) =>{
     }
 })
 
+
+authRouter.get("/google", googleLogin)
+authRouter.get("/google/callback", googleCallback)
+
+authRouter.get("/me", auth, async (req, res) => {
+    const userId = req.user?.id
+    if(!userId){
+        return res.status(401).json({
+            message:"unauthorized no user id"
+        })
+    }
+    const user  = await prisma.user.findUnique({
+        where:{
+            id:userId
+        }
+    })
+    return res.status(200).json({
+        success:true,
+        user
+    })
+})
 export {authRouter}

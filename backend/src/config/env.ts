@@ -66,6 +66,20 @@ function getDeploymentStatus(){
     return key
 }
 
+export const credentials = {
+    GOOGLE_CLIENT_ID:process.env.GOOGLE_CLIENT_ID,
+    
+    GOOGLE_CLIENT_SECRET:process.env.GOOGLE_CLIENT_ID,
+
+    GITHUB_CLIENT_ID: process.env.GITHUB_CLIENT_ID,
+    GITHUB_CLIENT_SECRET:process.env.GITHUB_CLIENT_SECRET,
+
+    GOOGLE_CALLBACK_URL:process.env.GOOGLE_CALLBACK_URL,
+    GITHUB_CALLBACK_URL:process.env.GITHUB_CALLBACK_URL,
+
+    FRONTEND_URL:process.env.FRONTEND_URL
+
+}
 export const DEPLOYMENT_STATUS = getDeploymentStatus()
 export const DEEPGRAM_KEY = getDeepgramKey()
 export const JWT_SECRET = getJwtSecret()

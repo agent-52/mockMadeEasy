@@ -17,49 +17,57 @@ datasource db {
 // ENUMS
 // ===================
 
-enum InterviewPhase{
+enum InterviewPhase {
   base
   followup
   completed
 }
-enum Status{
+
+enum Status {
   active
   completed
   cancelled
 }
-enum InterviewRole{
+
+enum InterviewRole {
   frontend
   backend
   fullstack
   dsa
 }
-enum SubjectCategory{
+
+enum SubjectCategory {
   frontend
   backend
   database
   dsa
   system_design
 }
-enum Mode{
+
+enum Mode {
   theory
   coding
   mixed
 }
+
 enum Role {
   admin
   user
 }
-enum Language{
-  node 
+
+enum Language {
+  node
   cpp
   python
 }
+
 enum Difficulty {
   easy
   medium
   hard
 }
-enum QuestionType{
+
+enum QuestionType {
   theory
   coding
 }
@@ -76,89 +84,111 @@ enum SubjectType {
 // MODELS
 // ===================
 
-model User {
-  id          Int          @id @default(autoincrement())
-  name        String
-  email       String       @unique
-  password    String
-  role        Role         @default(user)
-  createdAt   DateTime     @default(now())
+enum OAuthProvider {
+  GOOGLE
+  GITHUB
+}
 
-  interviews  Interview[]
-  statsCards  StatsCard[]
+model OAuthAccount {
+  id                Int           @id @default(autoincrement())
+  provider          OAuthProvider
+  providerAccountId String
+  userId            Int
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([provider, providerAccountId])
+  @@unique([provider, userId])
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  password  String?
+  avatarUrl String?
+  role      Role     @default(user)
+  createdAt DateTime @default(now())
+
+  interviews    Interview[]
+  statsCards    StatsCard[]
   refreshTokens RefreshTokens[]
+  oauthAccounts OAuthAccount[]
 }
 
 // -------------------
 // Questions
 // -------------------
 model Question {
-  id          Int                 @id @default(autoincrement())
-  title       String
-  slug        String              @unique
-  description String?
-  difficulty  Difficulty
-  followUpToQuesitonId  Int?
-  type        QuestionType?
-  constraints String?
-  inputFormat String?
-  outputFormat String?
-  starterCode String?
-  averageTime Int @default(7)
-  createdAt   DateTime             @default(now())
+  id                   Int           @id @default(autoincrement())
+  title                String
+  slug                 String        @unique
+  description          String?
+  difficulty           Difficulty
+  followUpToQuesitonId Int?
+  type                 QuestionType?
+  constraints          String?
+  inputFormat          String?
+  outputFormat         String?
+  starterCode          String?
+  averageTime          Int           @default(7)
+  createdAt            DateTime      @default(now())
 
   // Relations
-  topics      QuestionTopic[]
-  testCases  TestCase[]
-  companies   QuestionCompany[]
-  interviewQs InterviewQuestion[]
-  statsCardDetails StatsCardDetail[]  
+  topics           QuestionTopic[]
+  testCases        TestCase[]
+  companies        QuestionCompany[]
+  interviewQs      InterviewQuestion[]
+  statsCardDetails StatsCardDetail[]
 }
 
 // Mapping: Question ↔ Company
 model Company {
-  id         Int                @id @default(autoincrement())
-  name       String  @unique
-  questions  QuestionCompany[]
+  id        Int               @id @default(autoincrement())
+  name      String            @unique
+  questions QuestionCompany[]
 }
 
 model QuestionCompany {
-  id         Int      @id @default(autoincrement())
+  id         Int @id @default(autoincrement())
   questionId Int
   companyId  Int
 
-  question   Question @relation(fields: [questionId], references: [id])
-  company    Company  @relation(fields: [companyId], references: [id])
+  question Question @relation(fields: [questionId], references: [id])
+  company  Company  @relation(fields: [companyId], references: [id])
 
   @@unique([questionId, companyId])
 }
 
 // Mapping: Question ↔ Topic
 model Topic {
-  id         Int             @id @default(autoincrement())
-  name       String          
-  subjectId  Int
+  id        Int    @id @default(autoincrement())
+  name      String
+  subjectId Int
 
-  subject    Subject         @relation(fields: [subjectId], references: [id])
-  questions  QuestionTopic[]
+  subject   Subject         @relation(fields: [subjectId], references: [id])
+  questions QuestionTopic[]
 
-   @@unique([name, subjectId])
+  @@unique([name, subjectId])
 }
 
 model Subject {
-  id       Int       @id @default(autoincrement())
-  title    SubjectType  @unique
+  id       Int             @id @default(autoincrement())
+  title    SubjectType     @unique
   categoty SubjectCategory
   topics   Topic[]
 }
 
 model QuestionTopic {
-  id         Int      @id @default(autoincrement())
+  id         Int @id @default(autoincrement())
   questionId Int
   topicId    Int
 
-  question   Question @relation(fields: [questionId], references: [id])
-  topic      Topic    @relation(fields: [topicId], references: [id])
+  question Question @relation(fields: [questionId], references: [id])
+  topic    Topic    @relation(fields: [topicId], references: [id])
 
   @@unique([questionId, topicId])
 }
@@ -167,71 +197,71 @@ model QuestionTopic {
 // Interviews
 // -------------------
 model Interview {
-  id          Int                 @id @default(autoincrement())
-  userId      Int
+  id     Int @id @default(autoincrement())
+  userId Int
 
-  startedAt   DateTime            @default(now())
-  endedAt     DateTime?
+  startedAt DateTime  @default(now())
+  endedAt   DateTime?
 
-  title       String?
-  roleType    InterviewRole
-  difficulty   Difficulty
-  subjects      SubjectType[]
-  estimatedDuration   DateTime?
-  status     Status
-  includeIntro  Boolean @default(false)
-  phase InterviewPhase @default(base)
+  title              String?
+  roleType           InterviewRole
+  difficulty         Difficulty
+  subjects           SubjectType[]
+  estimatedDuration  DateTime?
+  status             Status
+  includeIntro       Boolean         @default(false)
+  phase              InterviewPhase  @default(base)
   lastEvaluatedPhase InterviewPhase?
 
   communicationClarity String?
-  conceptDepth String?
-  logicalThinking String?
-  confidenceLevel String?
-  codeStructure String?
-  strengths String[] 
-  areasToImprove String[]
-  recommendedFocus String[]
-  aiSummaryGenerated Boolean @default(false)
+  conceptDepth         String?
+  logicalThinking      String?
+  confidenceLevel      String?
+  codeStructure        String?
+  strengths            String[]
+  areasToImprove       String[]
+  recommendedFocus     String[]
+  aiSummaryGenerated   Boolean  @default(false)
 
-  user        User                @relation(fields: [userId], references: [id])
-  statsCards  StatsCard?
-  questions   InterviewQuestion[]
+  user       User                @relation(fields: [userId], references: [id])
+  statsCards StatsCard?
+  questions  InterviewQuestion[]
 
   @@index([userId, startedAt])
 }
 
 // Mapping: Interview ↔ Question
 model InterviewQuestion {
-  id          Int       @id @default(autoincrement())
+  id          Int      @id @default(autoincrement())
   interviewId Int
   questionId  Int
   isCorrect   Boolean?
   order       Int?
-  timeTaken   Int @default(0)      // in seconds
+  timeTaken   Int      @default(0) // in seconds
 
   skipped Boolean @default(false)
 
-  clarityScore Int?
-  conceptDepthScore Int?
+  clarityScore         Int?
+  conceptDepthScore    Int?
   logicalThinkingScore Int?
-  confidenceScore Int?
-  overallScore Int?
-  idealAnswer String?
-  gapAnalysis String?
-  aiFeedback String?
-  strengths  String[]
-  areasToImprove String[]
-  timeInsight Json ?
+  confidenceScore      Int?
+  overallScore         Int?
+  idealAnswer          String?
+  gapAnalysis          String?
+  aiFeedback           String?
+  strengths            String[]
+  areasToImprove       String[]
+  timeInsight          Json?
 
   //for coding quesiton ai evaluation
-  correctnessScore Int?
-  codeQualityScore Int?
+  correctnessScore    Int?
+  codeQualityScore    Int?
   problemSolvingScore Int?
 
-  
-  interview   Interview @relation(fields: [interviewId], references: [id])
-  question    Question  @relation(fields: [questionId], references: [id])
-  response UserResponse?
+  interview Interview     @relation(fields: [interviewId], references: [id])
+  question  Question      @relation(fields: [questionId], references: [id])
+  response  UserResponse?
+
   @@unique([interviewId, questionId])
 }
 
@@ -239,65 +269,64 @@ model InterviewQuestion {
 // Responses
 // -------------------
 model UserResponse {
-  id          Int       @id @default(autoincrement())
-  interviewQuestionId  Int
-  response    String
-  attemptedAt DateTime  @default(now())
-  language Language?
-  interviewQuestion  InterviewQuestion @relation(fields: [interviewQuestionId], references:[id])
+  id                  Int               @id @default(autoincrement())
+  interviewQuestionId Int
+  response            String
+  attemptedAt         DateTime          @default(now())
+  language            Language?
+  interviewQuestion   InterviewQuestion @relation(fields: [interviewQuestionId], references: [id])
 
   @@unique([interviewQuestionId])
-  
 }
 
 // -------------------
 // Stats
 // -------------------
 model StatsCard {
-  id             Int              @id @default(autoincrement())
+  id             Int      @id @default(autoincrement())
   userId         Int
-  interviewId    Int              @unique
-  totalAttempted Int              @default(0)
-  totalCorrect   Int              @default(0)
-  accuracy       Float            @default(0)
-  lastUpdated    DateTime         @default(now())
+  interviewId    Int      @unique
+  totalAttempted Int      @default(0)
+  totalCorrect   Int      @default(0)
+  accuracy       Float    @default(0)
+  lastUpdated    DateTime @default(now())
 
-  user           User             @relation(fields: [userId], references: [id])
-  interview      Interview        @relation(fields: [interviewId], references: [id])
-  details        StatsCardDetail[]
+  user      User              @relation(fields: [userId], references: [id])
+  interview Interview         @relation(fields: [interviewId], references: [id])
+  details   StatsCardDetail[]
 }
 
 model StatsCardDetail {
-  id          Int       @id @default(autoincrement())
+  id          Int      @id @default(autoincrement())
   statsCardId Int
   questionId  Int
   isCorrect   Boolean?
 
-  statsCard   StatsCard @relation(fields: [statsCardId], references: [id])
-  question    Question  @relation(fields: [questionId], references: [id])
+  statsCard           StatsCard            @relation(fields: [statsCardId], references: [id])
+  question            Question             @relation(fields: [questionId], references: [id])
   codeExecutionResult CodeExecutionResult?
+
   @@unique([statsCardId, questionId])
 }
 
-model RefreshTokens{
-  id Int @id @default(autoincrement())
-  userId Int 
+model RefreshTokens {
+  id        Int      @id @default(autoincrement())
+  userId    Int
   tokenHash String
-  expiresAt DateTime 
+  expiresAt DateTime
   createdAt DateTime @default(now())
 
   user User @relation(fields: [userId], references: [id])
 
   @@index([userId])
-
 }
 
-model TestCase{
-  id Int @id @default(autoincrement())
-  questionId Int
-  input String
+model TestCase {
+  id             Int     @id @default(autoincrement())
+  questionId     Int
+  input          String
   expectedOutput String
-  isPublic Boolean @default(false)
+  isPublic       Boolean @default(false)
 
   question Question @relation(fields: [questionId], references: [id])
 
@@ -305,26 +334,23 @@ model TestCase{
 }
 
 model CodeExecutionResult {
-  id           Int      @id @default(autoincrement())
-  statsCardDetailId Int  @unique
-  passedCount   Int
-  failedCount   Int
-  totalCount    Int
-  passed        Boolean
-  error        String?
-  runtimeMs    Int?
-  createdAt    DateTime @default(now())
+  id                Int      @id @default(autoincrement())
+  statsCardDetailId Int      @unique
+  passedCount       Int
+  failedCount       Int
+  totalCount        Int
+  passed            Boolean
+  error             String?
+  runtimeMs         Int?
+  createdAt         DateTime @default(now())
 
   statsCardDetail StatsCardDetail @relation(fields: [statsCardDetailId], references: [id])
-
-  
 }
 
-model TtsCache{
-  id  Int @id@default(autoincrement())
-  textHash String @unique 
-  text String
-  audioUrl String
+model TtsCache {
+  id        Int      @id @default(autoincrement())
+  textHash  String   @unique
+  text      String
+  audioUrl  String
   createdAt DateTime @default(now())
 }
-
