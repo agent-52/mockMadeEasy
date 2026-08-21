@@ -9,7 +9,7 @@ import { DEPLOYMENT_STATUS, JWT_SECRET } from '../config/env';
 import crypto from "crypto"
 import { deleteToken, rotateToken, storeToken, verifyToken } from '../db/refreshTokenQueries';
 import { prisma } from '../db/db';
-import { googleCallback, googleLogin } from './oAuth';
+import { githubCallback, githubLogin, googleCallback, googleLogin } from './oAuth';
 import { auth } from '../middlewares/authMiddlewar';
 
 const authRouter = express.Router();
@@ -219,6 +219,9 @@ authRouter.post('/logout', async(req, res) =>{
 
 authRouter.get("/google", googleLogin)
 authRouter.get("/google/callback", googleCallback)
+
+authRouter.get("/github", githubLogin)
+authRouter.get("/github/callback", githubCallback)
 
 authRouter.get("/me", auth, async (req, res) => {
     const userId = req.user?.id

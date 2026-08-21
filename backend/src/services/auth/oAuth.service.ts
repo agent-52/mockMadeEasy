@@ -3,7 +3,7 @@ import { prisma } from "../../db/db";
 
 type OAuthProvider = "GOOGLE" | "GITHUB";
 
-interface OAuthProfile {
+export interface OAuthProfile {
   provider: OAuthProvider;
   providerAccountId: string;
   email: string;
@@ -22,6 +22,16 @@ export const getGoogleAuthUrl = () => {
   });
 
   return `https://accounts.google.com/o/oauth2/v2/auth?${params}`;
+};
+
+export const getGithubAuthUrl = () => {
+  const params = new URLSearchParams({
+    client_id: process.env.GITHUB_CLIENT_ID!,
+    redirect_uri: process.env.GITHUB_CALLBACK_URL!,
+    scope: "read:user user:email",
+  });
+
+  return `https://github.com/login/oauth/authorize?${params}`;
 };
 
 export const getGoogleTokens = async (code: string) => {
@@ -44,12 +54,67 @@ export const getGoogleTokens = async (code: string) => {
   return response.data;
 };
 
+export const getGithubToken = async (
+  code: string
+) => {
+  const response = await axios.post(
+    "https://github.com/login/oauth/access_token",
+    {
+      client_id: process.env.GITHUB_CLIENT_ID,
+      client_secret: process.env.GITHUB_CLIENT_SECRET,
+      code,
+      redirect_uri: process.env.GITHUB_CALLBACK_URL,
+    },
+    {
+      headers: {
+        Accept: "application/json",
+      },
+    }
+  );
+
+  return response.data;
+};
+
+
+
 export const getGoogleProfile = async (accessToken: string) => {
   const response = await axios.get(
     "https://www.googleapis.com/oauth2/v3/userinfo",
     {
       headers: {
         Authorization: `Bearer ${accessToken}`,
+      },
+    }
+  );
+
+  return response.data;
+};
+
+export const getGithubProfile = async (
+  accessToken: string
+) => {
+  const response = await axios.get(
+    "https://api.github.com/user",
+    {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        Accept: "application/vnd.github+json",
+      },
+    }
+  );
+
+  return response.data;
+};
+
+export const getGithubEmails = async (
+  accessToken: string
+) => {
+  const response = await axios.get(
+    "https://api.github.com/user/emails",
+    {
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+        Accept: "application/vnd.github+json",
       },
     }
   );
