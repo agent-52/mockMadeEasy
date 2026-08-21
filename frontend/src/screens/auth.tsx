@@ -101,7 +101,7 @@ const AuthScreen = () => {
               text="Continue with Google"
               icon={<FcGoogle />}
               onClickFn={() => {
-                window.location.href = `${import.meta.env.VITE_API_URL}/api/auth/google`;
+                window.location.href = `${import.meta.env.VITE_API_BASE_URL}/api/auth/google`;
               }}
               disabled={false}
             />
@@ -112,7 +112,7 @@ const AuthScreen = () => {
               text="Continue with Github"
               icon={<FaGithub />}
               onClickFn={() => {
-                window.location.href = `${import.meta.env.VITE_API_URL}/api/auth/github`;
+                window.location.href = `${import.meta.env.VITE_API_BASE_URL}/api/auth/github`;
               }}
               disabled={false}
             />
