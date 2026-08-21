@@ -5,7 +5,6 @@ import http from "http"
 import "./websocket/transcript/speechServer"
 import { setupWebSocket } from "./websocket/transcript/speechServer"
 import cors from 'cors';
-import passport from "../src/config/passport"
 
 const app = express()
 app.use(cors({
