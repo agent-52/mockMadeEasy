@@ -7,7 +7,7 @@ import { FaGithub } from "react-icons/fa";
 import { InputWithLabel } from "../components/Input";
 import { Identity } from "../components/Identity";
 import { Link, useLocation, useNavigate } from "react-router";
-import { loginUser, signupUser } from "../api/auth.api";
+import { googleLogin, loginUser, signupUser } from "../api/auth.api";
 import { authStore } from "../store/auth.store";
 const AuthScreen = () => {
   const [mode, setMode] = useState("login");
@@ -33,7 +33,7 @@ const AuthScreen = () => {
       setMode("login");
     }
   }
-  function handleOauth() {}
+
   function handleInput(e: React.ChangeEvent<HTMLInputElement>) {
     const targetName = e.target.name;
     setInputValues({
@@ -100,7 +100,9 @@ const AuthScreen = () => {
               paddingY={5}
               text="Continue with Google"
               icon={<FcGoogle />}
-              onClickFn={handleOauth}
+              onClickFn={() => {
+                window.location.href = `${import.meta.env.VITE_API_URL}/api/auth/google`;
+              }}
               disabled={false}
             />
             <ButtonWithImage
@@ -109,7 +111,9 @@ const AuthScreen = () => {
               paddingY={5}
               text="Continue with Github"
               icon={<FaGithub />}
-              onClickFn={handleOauth}
+              onClickFn={() => {
+                window.location.href = `${import.meta.env.VITE_API_URL}/api/auth/github`;
+              }}
               disabled={false}
             />
 
